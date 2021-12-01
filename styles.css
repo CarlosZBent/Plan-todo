@@ -1,0 +1,14 @@
+
+div{
+    position: relative;
+    padding: 10px;
+    height: fit-content;
+    width: 60%;
+    margin: 15px auto;
+    box-shadow: 0px 0px 6px 3px grey;
+    border-radius: 5px;
+}
+
+.second{
+    display: none;
+}
