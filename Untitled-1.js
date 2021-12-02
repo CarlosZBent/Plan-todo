@@ -2,7 +2,6 @@ console.log("CONSOLE YES");
 
 const dropSection = function () {
   // function to drop the div
-  console.log("hello"); // for debugging
   let section2 = document.getElementById("section2"); // get the section
   section2.style.display = "block";
   /* it's display CSS property is originally 'none', 
@@ -16,26 +15,33 @@ dropBt.addEventListener("click", dropSection); // get the button and add the eve
 
 // add text to container
 
-//get input tag from HTML
+//getting DOM elements
 let taskNameInput = document.getElementById("finalText");
+let secondForm = document.getElementById('secondForm')
+
+// let tasksList = [];  
 
 const addTask = function (task) {
-  /* function to add a task to a container. The task parameter
-  is filled with the value from the input */
+  tasksList.push(task); // adding task to storage array
   console.log(task); // debugging
-  // adding text from the input to the container
-  let taskTag = document.createElement('p');
+  let taskTag = document.createElement('li');
   let taskText = document.createTextNode(task);
   taskTag.append(taskText);
-  let container = document.getElementById('container');
-  container.append(taskTag);
+  let listParent = document.getElementById('listParent');
+  listParent.append(taskTag);
+  localStorage.setItem("tasks", JSON.stringify(tasksList));
 };
 
-// getting button tag from HTML
-let saveBt = document.getElementById("finalBt");
-// getting form from HTML
-let secondForm = document.getElementById('secondForm')
 secondForm.onsubmit = (event) => {
   event.preventDefault(); // prevents the page refresh on submit
-  addTask(taskNameInput.value)
+  addTask(taskNameInput.value);
+}
+
+// updating data when the app starts
+const existingTasks = JSON.parse(localStorage.getItem("tasks"));
+let tasksList = [];
+if (tasksList != existingTasks){
+  let tasksList = existingTasks || [];
+  tasksList.forEach(savedTask => addTask(savedTask));
+  console.log(existingTasks)
 }
