@@ -1,7 +1,7 @@
 
 div{
     position: relative;
-    padding: 10px;
+    padding: 7px;
     height: fit-content;
     width: 60%;
     margin: 15px auto;
@@ -9,6 +9,6 @@ div{
     border-radius: 5px;
 }
 
-.second{
+.chooseActionDiv{
     display: none;
 }
