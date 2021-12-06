@@ -1,17 +1,22 @@
 console.log("CONSOLE YES");
 
-const dropSection = function () {
-  // function to drop the div
-  let chooseActionSection = document.getElementById("chooseActionSectionId"); // get the section
-  chooseActionSection.style.display = "block";
+const dropSection = function (section_name) {
+  section_name.style.display = "block";
   /* it's display CSS property is originally 'none', 
-  this sets it to hidden so it becomes visible.
+  this sets it to 'block' so it becomes visible.
   If the intention is to make it a toogle, 
   it can be wrapped in an if statement*/
 };
 
-let dropBt = document.getElementById("dropSectionTwoBt");
-dropBt.addEventListener("click", dropSection); // get the button and add the event
+// get the DOM elements
+let chooseActionSection = document.getElementById("chooseActionSectionId"); 
+let selectTypeOfTaskSection = document.getElementById("selectTypeOfTaskDivId");
+
+let dropSectionTwoBt = document.getElementById("dropSectionTwoBt");
+// dropSectionTwoBt.addEventListener("click", dropSection(chooseActionSection));
+
+let dropTypeOfTaskSectionBt = document.getElementById('dropTypeOfTaskSectionBtId');
+// dropTypeOfTaskSectionBt.addEventListener('click', dropSection(selectTypeOfTaskSection));
 
 // add text to container
 

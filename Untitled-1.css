@@ -12,3 +12,6 @@ div{
 .chooseActionDiv{
     display: none;
 }
+.selectTypeOfTaskDiv {
+    display: none;
+}

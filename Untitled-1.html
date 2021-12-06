@@ -15,17 +15,31 @@
         <form action="">
             <input type="text" name="Escribe aquí" id="taskName" placeholder="Escribe el nombre de la tarea">
         </form>
-        <button id="dropSectionTwoBt">
+        <button id="dropSectionTwoBt"
+        onclick="dropSection(chooseActionSection)">
             Continuar
         </button>
     </div>
     <div class="chooseActionDiv" id='chooseActionSectionId'>
         <h2>¿Puedes actuar sobre la tarea ahora?</h2>
-        <button>
+        <button id='dropTypeOfTaskSectionBtId'
+        onclick="dropSection(selectTypeOfTaskSection)">
             Sí
         </button>
         <button>
             No
+        </button>
+    </div>
+    <div id="selectTypeOfTaskDivId" class="selectTypeOfTaskDiv">
+        <h2>¿Cuál es la siguiente acción?</h2>
+        <button>
+            Requiere mas de una acción
+        </button>
+        <button>
+            Lo haré ahora
+        </button>
+        <button>
+            Lo haré apenas pueda
         </button>
     </div>
     <div id="addStuffDiv">
