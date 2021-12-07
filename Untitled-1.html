@@ -74,13 +74,16 @@
 
     </div>
     <div class='negativeActionSection' id="negativeActionSectionId">
-        <button id='recycleBinBt'>
+        <button id='recycleBinBt'
+        onclick="saveNegativeActionTask(recycleBinContainer)">
             No me sirve en absoluto
         </button>
-        <button id='somedayMaybeBt'>
+        <button id='somedayMaybeBt'
+        onclick="saveNegativeActionTask(somedayTasksContainer)">
             Ahora no puedo, tal vez después sí
         </button>
-        <button id='referenceMaterialBt'>
+        <button id='referenceMaterialBt'
+        onclick="saveNegativeActionTask(referenceMaterialContainer)">
             Necesito tenerlo a mano para revisión o consulta
         </button>
     </div>
@@ -97,6 +100,34 @@
 
         </ul>
     </div>
+    <div id="recycleBinContainerId" class='recycleBinContainer'>
+        <h3 class="recycleBinHeader">
+            Papelera de reciclaje
+        </h3>
+        <ul id='recycleBinUl'>
+
+        </ul>
+    </div>
+    <div id="somedayTasksContainerId" class='somedayTasksContainer'>
+        <h3 class="somedayTaskContainerHeader">
+            Tareas pospuestas
+        </h3>
+        <ul id='somedayMaybeUl'>
+
+        </ul>
+    </div>
+    <div id="referenceMaterialContainerId" class='referenceMaterialContainer'>
+        <h3 class='referenceMaterialContainerHeader'>
+            Material de referencia y consulta
+        </h3>
+        <ul class='referenceMaterialUl'>
+
+        </ul>
+    </div>
+
+
+
+
 
 
     <div id="addStuffDiv">
