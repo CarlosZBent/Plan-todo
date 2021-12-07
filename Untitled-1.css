@@ -5,7 +5,7 @@ div{
     height: fit-content;
     width: 40%;
     margin: 15px auto;
-    box-shadow: 0px 0px 6px 3px grey;
+    box-shadow: 0px 0px 3px 1px grey;
     border-radius: 5px;
 }
 
@@ -16,5 +16,8 @@ div{
     display: none;
 }
 .negativeActionSection {
+    display: none;
+}
+.externalSoftwareLinksSection {
     display: none;
 }

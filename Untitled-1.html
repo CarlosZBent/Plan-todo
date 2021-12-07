@@ -33,15 +33,45 @@
     <div id="TypeOfTaskSectionId" class="TypeOfTaskSection">
         <h2>¿Cuál es la siguiente acción?</h2>
         <button id='projectBt'
-        onclick="showFinalSection()">
+        onclick="saveNewProject()">
             Requiere más de una acción
         </button>
-        <button id='actNowBt'>
+        <button id='actNowBt'
+        onclick="dropSection(externalSoftwareLinksSection)">
             Lo haré ahora
         </button>
-        <button id='todoBt'>
+        <button id='todoBt'
+        onclick="saveNewTodo()">
             Lo haré apenas pueda
         </button>
+
+        <div class="externalSoftwareLinksSection"
+        id='externalSoftwareLinksSectionId'>
+            <ul id='externalSoftwareLinksUl'> <strong>Software útil</strong>
+                <li class='externalSoftwareLinksLi'>
+                    Google Docs
+                </li>
+                <li class='externalSoftwareLinksLi'>
+                    Notion
+                </li>
+                <li class='externalSoftwareLinksLi'>
+                    Figma
+                </li>
+                <li class='externalSoftwareLinksLi'>
+                    VS Code (web edition)
+                </li>
+                <li class='externalSoftwareLinksLi'>
+                    Google Sheets
+                </li>
+                <li class='externalSoftwareLinksLi'>
+                    Pixlr.com
+                </li>
+                <li class='externalSoftwareLinksLi'>
+                    video editor
+                </li>
+            </ul>
+        </div>
+
     </div>
     <div class='negativeActionSection' id="negativeActionSectionId">
         <button id='recycleBinBt'>
@@ -54,10 +84,19 @@
             Necesito tenerlo a mano para revisión o consulta
         </button>
     </div>
-    <div class="finalActionContainer" id='finalActionContainerId'>
-
+    <div class="projectsContainer" id='projectsContainerId'>
+        <h3 class="projectsHeader">
+            Proyectos
+        </h3>
     </div>
+    <div class="todosContainer" id='todosContainerId'>
+        <h3 class="todosHeader">
+            Tareas por hacer
+        </h3>
+        <ul id="todosParentListId" class='todosParentList'>
 
+        </ul>
+    </div>
 
 
     <div id="addStuffDiv">
