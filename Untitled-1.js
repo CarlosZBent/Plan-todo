@@ -10,13 +10,28 @@ const dropSection = function (section_name) {
 
 // get the DOM elements
 let chooseActionSection = document.getElementById("chooseActionSectionId"); 
-let selectTypeOfTaskSection = document.getElementById("selectTypeOfTaskDivId");
+let TypeOfTaskSection = document.getElementById("TypeOfTaskDivId");
 
-let dropSectionTwoBt = document.getElementById("dropSectionTwoBt");
-// dropSectionTwoBt.addEventListener("click", dropSection(chooseActionSection));
-
+let dropSectionTwoBt = document.getElementById("dropChooseActionSectionBt");
 let dropTypeOfTaskSectionBt = document.getElementById('dropTypeOfTaskSectionBtId');
-// dropTypeOfTaskSectionBt.addEventListener('click', dropSection(selectTypeOfTaskSection));
+
+// display div accordingly to chosen action
+
+let projectBt = document.getElementById('projectBt');
+let actNowBt = document.getElementById('actNowBt');
+let todoBt = document.getElementById('todoBt')
+let finalActionContainer = document.getElementById('finalActionSectionId')
+
+const showFinalSection = function () {
+  let finalActionSubContainer = document.createElement('div');
+  finalActionContainer.append(finalActionSubContainer);
+  let finalTaskUl = document.createElement('ul');
+  finalActionSubContainer.append(finalTaskUl);
+  let finalTaskLi = document.createElement('li');
+  finalTaskUl.append(finalTaskLi);
+  let finalListItems = document.createTextNode('test')
+  finalTaskLi.append(finalListItems)
+}
 
 // add text to container
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stuff organizer</title>
     <link rel="stylesheet" href="Untitled-1.css">
 </head>
 
@@ -15,7 +15,7 @@
         <form action="">
             <input type="text" name="Escribe aquí" id="taskName" placeholder="Escribe el nombre de la tarea">
         </form>
-        <button id="dropSectionTwoBt"
+        <button id="dropChooseActionSectionBt"
         onclick="dropSection(chooseActionSection)">
             Continuar
         </button>
@@ -23,25 +23,32 @@
     <div class="chooseActionDiv" id='chooseActionSectionId'>
         <h2>¿Puedes actuar sobre la tarea ahora?</h2>
         <button id='dropTypeOfTaskSectionBtId'
-        onclick="dropSection(selectTypeOfTaskSection)">
+        onclick="dropSection(TypeOfTaskSection)">
             Sí
         </button>
         <button>
             No
         </button>
     </div>
-    <div id="selectTypeOfTaskDivId" class="selectTypeOfTaskDiv">
+    <div id="TypeOfTaskDivId" class="TypeOfTaskDiv">
         <h2>¿Cuál es la siguiente acción?</h2>
-        <button>
-            Requiere mas de una acción
+        <button id='projectBt'
+        onclick="showFinalSection()">
+            Requiere más de una acción
         </button>
-        <button>
+        <button id='actNowBt'>
             Lo haré ahora
         </button>
-        <button>
+        <button id='todoBt'>
             Lo haré apenas pueda
         </button>
     </div>
+    <div class="finalActionSection" id='finalActionSectionId'>
+
+    </div>
+
+
+
     <div id="addStuffDiv">
         <form id='secondForm' action="">
             <input type="text" name="Escribe aquí" id="finalText" value="text">
