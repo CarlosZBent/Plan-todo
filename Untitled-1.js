@@ -10,17 +10,27 @@ const dropSection = function (section_name) {
 
 // get the DOM elements
 let chooseActionSection = document.getElementById("chooseActionSectionId"); 
-let TypeOfTaskSection = document.getElementById("TypeOfTaskDivId");
+let TypeOfTaskSection = document.getElementById("TypeOfTaskSectionId");
 
 let dropSectionTwoBt = document.getElementById("dropChooseActionSectionBt");
 let dropTypeOfTaskSectionBt = document.getElementById('dropTypeOfTaskSectionBtId');
+let dropNegativeActionSectionBt = document.getElementById('dropNegativeActionSectionBtId');
 
-// display div accordingly to chosen action
+// ***display final div accordingly to chosen action***
 
+// positive action buttons and container
 let projectBt = document.getElementById('projectBt');
 let actNowBt = document.getElementById('actNowBt');
 let todoBt = document.getElementById('todoBt')
-let finalActionContainer = document.getElementById('finalActionSectionId')
+let typeOfTaskSection = document.getElementById('typeOfTaskSectionId')
+
+// negative action buttons and container
+let recycleBinBt = document.getElementById('recycleBinBt')
+let somedayMaybeBt = document.getElementById('somedayMaybeBt')
+let referenceMaterialBt = document.getElementById('referenceMaterialBt')
+let negativeActionSection = document.getElementById('negativeActionSectionId')
+
+let finalActionContainer = document.getElementById('finalActionContainerId')
 
 const showFinalSection = function () {
   let finalActionSubContainer = document.createElement('div');
@@ -33,7 +43,7 @@ const showFinalSection = function () {
   finalTaskLi.append(finalListItems)
 }
 
-// add text to container
+// ***add text to container***
 
 //getting DOM elements
 let taskNameInput = document.getElementById("finalText");

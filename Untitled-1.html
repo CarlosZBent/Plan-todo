@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,11 +25,12 @@
         onclick="dropSection(TypeOfTaskSection)">
             Sí
         </button>
-        <button>
+        <button id='dropNegativeActionSectionBtId'
+        onclick="dropSection(negativeActionSection)">
             No
         </button>
     </div>
-    <div id="TypeOfTaskDivId" class="TypeOfTaskDiv">
+    <div id="TypeOfTaskSectionId" class="TypeOfTaskSection">
         <h2>¿Cuál es la siguiente acción?</h2>
         <button id='projectBt'
         onclick="showFinalSection()">
@@ -43,7 +43,18 @@
             Lo haré apenas pueda
         </button>
     </div>
-    <div class="finalActionSection" id='finalActionSectionId'>
+    <div class='negativeActionSection' id="negativeActionSectionId">
+        <button id='recycleBinBt'>
+            No me sirve en absoluto
+        </button>
+        <button id='somedayMaybeBt'>
+            Ahora no puedo, tal vez después sí
+        </button>
+        <button id='referenceMaterialBt'>
+            Necesito tenerlo a mano para revisión o consulta
+        </button>
+    </div>
+    <div class="finalActionContainer" id='finalActionContainerId'>
 
     </div>
 

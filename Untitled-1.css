@@ -3,7 +3,7 @@ div{
     position: relative;
     padding: 7px;
     height: fit-content;
-    width: 60%;
+    width: 40%;
     margin: 15px auto;
     box-shadow: 0px 0px 6px 3px grey;
     border-radius: 5px;
@@ -12,6 +12,9 @@ div{
 .chooseActionDiv{
     display: none;
 }
-.TypeOfTaskDiv {
+.TypeOfTaskSection {
+    display: none;
+}
+.negativeActionSection {
     display: none;
 }
