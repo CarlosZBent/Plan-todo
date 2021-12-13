@@ -33,6 +33,7 @@ let negativeActionSection = document.getElementById('negativeActionSectionId');
 // new project
 let projectsContainer = document.getElementById('projectsContainerId');
 const saveNewProject = function () {
+  projectsContainer.style.display = "block";
   let projectsSubContainer = document.createElement('div');
   projectsContainer.append(projectsSubContainer);
   let projectBody = document.createElement('p');
@@ -60,6 +61,7 @@ let recycleBinContainer = document.getElementById('recycleBinContainerId');
 let somedayTasksContainer = document.getElementById('somedayTasksContainerId');
 let referenceMaterialContainer = document.getElementById('referenceMaterialContainerId');
 const saveNegativeActionTask = function (container) {
+  container.style.display = "block";
   let newNegativeTask = document.createElement('li');
   let newNegativeTaskText = document.createTextNode('test negative task text');
   newNegativeTask.append(newNegativeTaskText);

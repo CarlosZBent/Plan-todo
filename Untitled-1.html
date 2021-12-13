@@ -20,20 +20,18 @@
         </button>
     </div>
 
-    <div class='chooseActionWraper'>
-
-        <div class="chooseActionDiv" id='chooseActionSectionId'>
-            <h2>¿Puedes actuar sobre la tarea ahora?</h2>
-            <button id='dropTypeOfTaskSectionBtId'
-            onclick="dropSection(TypeOfTaskSection)">
-                Sí
-            </button>
-            <button id='dropNegativeActionSectionBtId'
-            onclick="dropSection(negativeActionSection)">
-                No
-            </button>
-        </div>
-
+    <div class="chooseActionDiv" id='chooseActionSectionId'>
+        <h2>¿Puedes actuar sobre la tarea ahora?</h2>
+        <button id='dropTypeOfTaskSectionBtId'
+        onclick="dropSection(TypeOfTaskSection)">
+            Sí
+        </button>
+        <button id='dropNegativeActionSectionBtId'
+        onclick="dropSection(negativeActionSection)">
+            No
+        </button>
+    </div>
+    <div class='negativeActionWraper'>
         <div class='negativeActionSection' id="negativeActionSectionId">
             <button id='recycleBinBt'
             onclick="saveNegativeActionTask(recycleBinContainer)">
@@ -75,57 +73,59 @@
         </div>
 
     </div>
-
-    <div id="TypeOfTaskSectionId" class="TypeOfTaskSection">
-        <h2>¿Cuál es la siguiente acción?</h2>
-        <button id='projectBt'
-        onclick="saveNewProject()">
-            Requiere más de una acción
-        </button>
-        <button id='actNowBt'
-        onclick="dropSection(externalSoftwareLinksSection)">
-            Lo haré ahora
-        </button>
-        <button id='todoBt'
-        onclick="saveNewTodo()">
-            Lo haré apenas pueda
-        </button>
-
-        <div class="externalSoftwareLinksSection"
-        id='externalSoftwareLinksSectionId'>
-            <ul id='externalSoftwareLinksUl'> <strong>Software útil</strong>
-                <li class='externalSoftwareLinksLi'>
-                    Google Docs
-                </li>
-                <li class='externalSoftwareLinksLi'>
-                    Notion
-                </li>
-                <li class='externalSoftwareLinksLi'>
-                    Figma
-                </li>
-                <li class='externalSoftwareLinksLi'>
-                    VS Code (web edition)
-                </li>
-                <li class='externalSoftwareLinksLi'>
-                    Google Sheets
-                </li>
-                <li class='externalSoftwareLinksLi'>
-                    Pixlr.com
-                </li>
-                <li class='externalSoftwareLinksLi'>
-                    video editor
-                </li>
-            </ul>
+    <div class="positiveActionWraper">
+        <div class="projectsContainer" id='projectsContainerId'>
+            <!-- this div is before the "type of task section" because it needs to go to the left when both are displayed.
+                It is a child of "type of task section" but it is before for that reason-->
+            <h3 class="projectsHeader">
+                Proyectos
+            </h3>
         </div>
+        <div id="TypeOfTaskSectionId" class="TypeOfTaskSection">
+            <h2>¿Cuál es la siguiente acción?</h2>
+            <button id='projectBt'
+            onclick="saveNewProject()">
+                Requiere más de una acción
+            </button>
+            <button id='actNowBt'
+            onclick="dropSection(externalSoftwareLinksSection)">
+                Lo haré ahora
+            </button>
+            <button id='todoBt'
+            onclick="saveNewTodo()">
+                Lo haré apenas pueda
+            </button>
 
-    </div>
+            <div class="externalSoftwareLinksSection"
+            id='externalSoftwareLinksSectionId'>
+            <!-- this section is within the "type of task section. but is only revealed when necessary" -->
+                <ul id='externalSoftwareLinksUl'> <strong>Software útil</strong>
+                    <li class='externalSoftwareLinksLi'>
+                        Google Docs
+                    </li>
+                    <li class='externalSoftwareLinksLi'>
+                        Notion
+                    </li>
+                    <li class='externalSoftwareLinksLi'>
+                        Figma
+                    </li>
+                    <li class='externalSoftwareLinksLi'>
+                        VS Code (web edition)
+                    </li>
+                    <li class='externalSoftwareLinksLi'>
+                        Google Sheets
+                    </li>
+                    <li class='externalSoftwareLinksLi'>
+                        Pixlr.com
+                    </li>
+                    <li class='externalSoftwareLinksLi'>
+                        video editor
+                    </li>
+                </ul>
+            </div>
 
-    <div class="projectsContainer" id='projectsContainerId'>
-        <h3 class="projectsHeader">
-            Proyectos
-        </h3>
-    </div>
-    
+        </div>
+    </div>    
     <div class="todosContainer" id='todosContainerId'>
         <h3 class="todosHeader">
             Tareas por hacer
