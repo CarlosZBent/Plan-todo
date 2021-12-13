@@ -46,6 +46,7 @@ const saveNewProject = function () {
 let todosContainer = document.getElementById('todosContainerId');
 let todosParentList = document.getElementById('todosParentListId');
 const saveNewTodo = function () {
+  todosContainer.style.display = "block";
   let newTodo = document.createElement('li');
   let newTodoText = document.createTextNode('test todo text');
   newTodo.append(newTodoText);

@@ -1,6 +1,20 @@
 body {
     background-color: #f1f1f1;
 }
+.mainContainer{
+    width: 97%;
+    display: flex;
+    align-content: space-between;
+}
+    .leftContainer{
+        background-color: darkkhaki;
+    }
+    .centerContainer {
+        background-color: aquamarine;
+    }
+    .rightContainer {
+        background-color: darksalmon;
+}
 
 div{
     position: relative;
@@ -28,24 +42,16 @@ button {
 .negativeActionSection, .externalSoftwareLinksSection {
     display: none;
 }
-.negativeActionWraper {
-    background-color: bisque;
-    display: flex;
-    justify-content: flex-end;
-    width: 80%;
-}
 
 .recycleBinContainer, .somedayTasksContainer, .referenceMaterialContainer {
     display: none;
 }
 
-.positiveActionWraper {
-    display: flex;
-    justify-content: space-evenly;
-    width: 80%;
+.projectsContainer {
+    display: none;
 }
 
-.projectsContainer {
+.todosContainer {
     display: none;
 }
 
