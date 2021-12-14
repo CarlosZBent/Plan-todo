@@ -43,7 +43,7 @@
         <div class="chooseActionDiv" id='chooseActionSectionId'>
             <h2>¿Puedes actuar sobre la tarea ahora?</h2>
             <button id='dropTypeOfTaskSectionBtId'
-            onclick="dropSection(TypeOfTaskSection)">
+            onclick="dropSection(typeOfTaskSection)">
                 Sí
             </button>
             <button id='dropNegativeActionSectionBtId'
@@ -65,11 +65,9 @@
                     Necesito tenerlo a mano para revisión o consulta
                 </button>
             </div>
-            <div id="TypeOfTaskSectionId" class="TypeOfTaskSection">
+            <div id="typeOfTaskSectionId" class="typeOfTaskSection">
                 <h2>¿Cuál es la siguiente acción?</h2>
-                <button id='projectBt'
-                onclick="saveNewProject()
-                getPosition(chooseActionSection)">
+                <button id='projectBt' onclick="saveNewProject()">
                     Requiere más de una acción
                 </button>
                 <button id='actNowBt'

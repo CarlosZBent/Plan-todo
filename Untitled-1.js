@@ -2,8 +2,18 @@ console.log("CONSOLE YES");
 
 const dropSection = function (section_name) {
   section_name.style.visibility = "visible";
-  if (section_name == externalSoftwareLinksSection) {
-    section_name.style.display = 'block';
+  if (section_name == externalSoftwareLinksSection) section_name.style.display = 'block';
+  if (section_name == typeOfTaskSection) { 
+    /* this if statement's goal is to prevent negativeActionSection and typeOfTaskSection
+    from appearing at the same time. When one of the is called, the other's visibility and display
+    properties are changed to hide, and viceversa */
+    typeOfTaskSection.style.display = 'block';
+    negativeActionSection.style.display = 'none';
+    negativeActionSection.style.display = 'visible';
+  } else if (section_name == negativeActionSection) {
+    negativeActionSection.style.display = 'block';
+    typeOfTaskSection.style.display = 'none';
+    typeOfTaskSection.style.display = 'visible';
   }
   /* it's display CSS property is originally 'none', 
   this sets it to 'block' so it becomes visible.
@@ -13,19 +23,13 @@ const dropSection = function (section_name) {
 
 // get the DOM elements
 let chooseActionSection = document.getElementById("chooseActionSectionId"); 
-let TypeOfTaskSection = document.getElementById("TypeOfTaskSectionId");
+// let TypeOfTaskSection = document.getElementById("TypeOfTaskSectionId");
 
 let dropSectionTwoBt = document.getElementById("dropChooseActionSectionBt");
 let dropTypeOfTaskSectionBt = document.getElementById('dropTypeOfTaskSectionBtId');
 let dropNegativeActionSectionBt = document.getElementById('dropNegativeActionSectionBtId');
 
-/* **** */
-//let parentObj = chooseActionSection.getBoundingClientRect();
-// let testParentPos = chooseActionSection.offsetTop;
-//console.log(parentObj);
-/* **** */
-
-// getting the first element's position
+/*// getting the first element's position
 const getPosition = function (elem) {
   elemPosition = elem.getBoundingClientRect();
   console.log(elemPosition)
@@ -33,7 +37,7 @@ const getPosition = function (elem) {
 // moving second element
 const moveContainer = function (container) {
   container.style.top = '230';
-}
+}*/
 
 // ***display final div accordingly to chosen action***
 
