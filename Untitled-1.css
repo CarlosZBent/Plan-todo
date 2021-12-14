@@ -1,26 +1,31 @@
 body {
-    background-color: #f1f1f1;
+    background-color: #b4d1e1;
 }
 .mainContainer{
-    width: 97%;
+    width: 98%;
     display: flex;
     align-content: space-between;
+    background-color: #b4d1e1;
+    box-shadow: 0px 0px 0px;
 }
     .leftContainer{
-        background-color: darkkhaki;
+        background-color: #b4d1e1;
+        box-shadow: 0px 0px 0px;
     }
     .centerContainer {
-        background-color: aquamarine;
+        background-color: #b4d1e1;
+        box-shadow: 0px 0px 0px;
     }
     .rightContainer {
-        background-color: darksalmon;
+        background-color: #b4d1e1;
+        box-shadow: 0px 0px 0px;
 }
 
 div{
     position: relative;
     padding: 7px;
     height: fit-content;
-    width: 40%;
+    width: 95%;
     margin: 15px auto;
     box-shadow: 0px 2px 4px #cccaca; 
     background-color: white;
