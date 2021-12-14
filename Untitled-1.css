@@ -45,7 +45,19 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-
+.topLinksSection {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 15px auto;
+    width: 35%;
+    height: 30px;
+    background-color: #b4d1e1;
+    box-shadow: 0px 0px 0px;
+}
+.topLinksSection li {
+    display: inline;
+}
 .shortcutsContainer {
     width: 50%;
 }
