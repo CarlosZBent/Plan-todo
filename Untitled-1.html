@@ -9,8 +9,8 @@
 </head>
 
 <body>
-<div class="mainContainer">
-    <div class="leftContainer">
+<div class="mainContainer"> <!--main div that contains the other three big containers-->
+    <div class="leftContainer"> <!--left aligned big div that contains containers that go left of the main page flow-->
         <div class="shortcutsContainer">
             <h3 class="shortcutsHeader"> Accesos directos</h3>
             <ul>
@@ -22,25 +22,22 @@
             </ul>
         </div>
         <div class="projectsContainer" id='projectsContainerId'>
-            <!-- this div is before the "type of task section" because it needs to go to the left when both are displayed.
-                It is a child of "type of task section" but it is before for that reason-->
             <h3 class="projectsHeader">
                 Proyectos
             </h3>
         </div>
     </div>
-    <div class="centerContainer">
+    <div class="centerContainer"> <!--centered big div that contains the main page flow-->
         <div class="taskNameDiv">
             <h2>¿Cuál es la tarea?</h2>
-            <form action="">
+            <form>
                 <input type="text" name="Escribe aquí" id="taskName" placeholder="Nombra la tarea...">
             </form>
             <button id="dropChooseActionSectionBt" onclick="dropSection(chooseActionSection)">
                 Continuar
             </button>
         </div>
-
-        <div class="chooseActionDiv" id='chooseActionSectionId'>
+        <div class="chooseActionSection" id='chooseActionSectionId'>
             <h2>¿Puedes actuar sobre la tarea ahora?</h2>
             <button id='dropTypeOfTaskSectionBtId'
             onclick="dropSection(typeOfTaskSection)">
@@ -81,7 +78,7 @@
 
                 <div class="externalSoftwareLinksSection"
                 id='externalSoftwareLinksSectionId'>
-                <!-- this section is within the "type of task section. but is only revealed when necessary" -->
+                <!-- this section is within the "type of task" section. but is only revealed when necessary -->
                     <ul id='externalSoftwareLinksUl'> <strong>Software útil</strong>
                         <li class='externalSoftwareLinksLi'>
                             Google Docs

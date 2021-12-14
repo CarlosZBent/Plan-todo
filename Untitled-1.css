@@ -21,7 +21,7 @@
     .rightContainer {
         background-color: #b4d1e1;
         box-shadow: 0px 0px 0px;
-        top: 330px;
+        top: 315px;
 }
 
 div{
@@ -53,10 +53,10 @@ button {
     display: none;
     width: 70%;
 }
-.chooseActionDiv, .typeOfTaskSection, 
+.chooseActionSection, .typeOfTaskSection, 
 .negativeActionSection {
-    visibility: hidden;
-    display: block;
+    /* visibility: hidden; */
+    display: none;
 }
 .externalSoftwareLinksSection {
     display: none;
@@ -76,11 +76,4 @@ button {
 
 .todosContainer {
     display: none;
-}
-
-.chooseActionDiv {
-    background-color: cadetblue;
-}
-.negativeActionSection {
-    background-color: aliceblue;
 }

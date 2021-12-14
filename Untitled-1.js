@@ -1,51 +1,35 @@
 console.log("CONSOLE YES");
 
 const dropSection = function (section_name) {
-  section_name.style.visibility = "visible";
+  section_name.style.display = "block";
   if (section_name == externalSoftwareLinksSection) section_name.style.display = 'block';
   if (section_name == typeOfTaskSection) { 
     /* this if statement's goal is to prevent negativeActionSection and typeOfTaskSection
     from appearing at the same time. When one of the is called, the other's visibility and display
     properties are changed to hide, and viceversa */
-    typeOfTaskSection.style.display = 'block';
+    //typeOfTaskSection.style.display = 'block';
     negativeActionSection.style.display = 'none';
-    negativeActionSection.style.display = 'visible';
+    //negativeActionSection.style.display = 'visible';
   } else if (section_name == negativeActionSection) {
-    negativeActionSection.style.display = 'block';
+    //negativeActionSection.style.display = 'block';
     typeOfTaskSection.style.display = 'none';
-    typeOfTaskSection.style.display = 'visible';
-  }
-  /* it's display CSS property is originally 'none', 
-  this sets it to 'block' so it becomes visible.
-  If the intention is to make it a toogle, 
-  it can be wrapped in an if statement*/
+    //typeOfTaskSection.style.display = 'visible';
+    }
 };
 
 // get the DOM elements
 let chooseActionSection = document.getElementById("chooseActionSectionId"); 
-// let TypeOfTaskSection = document.getElementById("TypeOfTaskSectionId");
-
 let dropSectionTwoBt = document.getElementById("dropChooseActionSectionBt");
 let dropTypeOfTaskSectionBt = document.getElementById('dropTypeOfTaskSectionBtId');
 let dropNegativeActionSectionBt = document.getElementById('dropNegativeActionSectionBtId');
-
-/*// getting the first element's position
-const getPosition = function (elem) {
-  elemPosition = elem.getBoundingClientRect();
-  console.log(elemPosition)
-}
-// moving second element
-const moveContainer = function (container) {
-  container.style.top = '230';
-}*/
 
 // ***display final div accordingly to chosen action***
 
 // positive action buttons and container
 let projectBt = document.getElementById('projectBt');
 let actNowBt = document.getElementById('actNowBt');
-let todoBt = document.getElementById('todoBt')
-let typeOfTaskSection = document.getElementById('typeOfTaskSectionId')
+let todoBt = document.getElementById('todoBt');
+let typeOfTaskSection = document.getElementById('typeOfTaskSectionId');
 
 // negative action buttons and container
 let recycleBinBt = document.getElementById('recycleBinBt');
@@ -77,8 +61,8 @@ const saveNewTodo = function () {
 }
 
 // show links to external software
+// just grabbing the element from the DOM, the action is performed by the dropSection function
 let externalSoftwareLinksSection = document.getElementById('externalSoftwareLinksSectionId');
-
 
 // add negative action task to container
 let recycleBinContainer = document.getElementById('recycleBinContainerId');
