@@ -19,6 +19,7 @@ body {
     .rightContainer {
         background-color: #b4d1e1;
         box-shadow: 0px 0px 0px;
+        top: 343px;
 }
 
 div{
@@ -44,9 +45,13 @@ button {
 }
 
 .chooseActionDiv, .TypeOfTaskSection, 
-.negativeActionSection, .externalSoftwareLinksSection {
+.negativeActionSection {
+    visibility: hidden;
+}
+.externalSoftwareLinksSection {
     display: none;
 }
+
 
 .recycleBinContainer, .somedayTasksContainer, .referenceMaterialContainer {
     display: none;
@@ -54,6 +59,9 @@ button {
 
 .projectsContainer {
     display: none;
+    position: relative;
+    top: 290px; /*this is to force the projects container to appear
+    wher it must, to the right of the button that calls it*/
 }
 
 .todosContainer {

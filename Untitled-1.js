@@ -1,7 +1,10 @@
 console.log("CONSOLE YES");
 
 const dropSection = function (section_name) {
-  section_name.style.display = "block";
+  section_name.style.visibility = "visible";
+  if (section_name == externalSoftwareLinksSection) {
+    section_name.style.display = 'block';
+  }
   /* it's display CSS property is originally 'none', 
   this sets it to 'block' so it becomes visible.
   If the intention is to make it a toogle, 
@@ -15,6 +18,22 @@ let TypeOfTaskSection = document.getElementById("TypeOfTaskSectionId");
 let dropSectionTwoBt = document.getElementById("dropChooseActionSectionBt");
 let dropTypeOfTaskSectionBt = document.getElementById('dropTypeOfTaskSectionBtId');
 let dropNegativeActionSectionBt = document.getElementById('dropNegativeActionSectionBtId');
+
+/* **** */
+//let parentObj = chooseActionSection.getBoundingClientRect();
+// let testParentPos = chooseActionSection.offsetTop;
+//console.log(parentObj);
+/* **** */
+
+// getting the first element's position
+const getPosition = function (elem) {
+  elemPosition = elem.getBoundingClientRect();
+  console.log(elemPosition)
+}
+// moving second element
+const moveContainer = function (container) {
+  container.style.top = '230';
+}
 
 // ***display final div accordingly to chosen action***
 

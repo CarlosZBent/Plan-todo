@@ -11,6 +11,16 @@
 <body>
 <div class="mainContainer">
     <div class="leftContainer">
+        <div class="shortcutsContainer">
+            <h3 class="shortcutsHeader"> Accesos directos</h3>
+            <ul>
+                <li>Proyectos</li>
+                <li>Tareas por hacer</li>
+                <li>Tareas pospuestas</li>
+                <li>Material de referencia y consulta</li>
+                <li>Software útil</li>
+            </ul>
+        </div>
         <div class="projectsContainer" id='projectsContainerId'>
             <!-- this div is before the "type of task section" because it needs to go to the left when both are displayed.
                 It is a child of "type of task section" but it is before for that reason-->
@@ -58,7 +68,8 @@
             <div id="TypeOfTaskSectionId" class="TypeOfTaskSection">
                 <h2>¿Cuál es la siguiente acción?</h2>
                 <button id='projectBt'
-                onclick="saveNewProject()">
+                onclick="saveNewProject()
+                getPosition(chooseActionSection)">
                     Requiere más de una acción
                 </button>
                 <button id='actNowBt'
