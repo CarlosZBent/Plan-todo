@@ -9,24 +9,44 @@
 </head>
 
 <body>
-
-    <div class="taskNameDiv">
-        <h2>¿Cuál es la tarea?</h2>
-        <form action="">
-            <input type="text" name="Escribe aquí" id="taskName" placeholder="Escribe el nombre de la tarea">
-        </form>
-        <button id="dropChooseActionSectionBt"
-        onclick="dropSection(chooseActionSection)">
-            Continuar
-        </button>
+    <div class="topLinksSection">
+        <li><a href=""> Contribuir </a></li>
+        <li><a href=""> Soporte técnico </a></li>
+        <li><a href=""> Sugerir características </a></li>
+        <li><a href=""> Instrucciones de uso </a></li>
     </div>
-
-    <div class='chooseActionWraper'>
-
-        <div class="chooseActionDiv" id='chooseActionSectionId'>
+<div class="mainContainer"> <!--main div that contains the other three big containers-->    
+    <div class="leftContainer"> <!--left aligned big div that contains containers that go left of the main page flow-->
+        <div class="shortcutsContainer">
+            <h3 class="shortcutsHeader"> Accesos directos</h3>
+            <ul>
+                <li>Proyectos</li>
+                <li>Tareas por hacer</li>
+                <li>Tareas pospuestas</li>
+                <li>Material de referencia y consulta</li>
+                <li>Software útil</li>
+            </ul>
+        </div>
+        <div class="projectsContainer" id='projectsContainerId'>
+            <h3 class="projectsHeader">
+                Proyectos
+            </h3>
+        </div>
+    </div>
+    <div class="centerContainer"> <!--centered big div that contains the main page flow-->
+        <div class="taskNameDiv">
+            <h2>¿Cuál es la tarea?</h2>
+            <form>
+                <input type="text" name="Escribe aquí" id="taskName" placeholder="Nombra la tarea...">
+            </form>
+            <button id="dropChooseActionSectionBt" onclick="dropSection(chooseActionSection)">
+                Continuar
+            </button>
+        </div>
+        <div class="chooseActionSection" id='chooseActionSectionId'>
             <h2>¿Puedes actuar sobre la tarea ahora?</h2>
             <button id='dropTypeOfTaskSectionBtId'
-            onclick="dropSection(TypeOfTaskSection)">
+            onclick="dropSection(typeOfTaskSection)">
                 Sí
             </button>
             <button id='dropNegativeActionSectionBtId'
@@ -34,97 +54,62 @@
                 No
             </button>
         </div>
+            <div class='negativeActionSection' id="negativeActionSectionId">
+                <button id='recycleBinBt'
+                onclick="saveNegativeActionTask(recycleBinContainer)">
+                    No me sirve en absoluto
+                </button>
+                <button id='somedayMaybeBt'
+                onclick="saveNegativeActionTask(somedayTasksContainer)">
+                    Ahora no puedo, tal vez después sí
+                </button>
+                <button id='referenceMaterialBt'
+                onclick="saveNegativeActionTask(referenceMaterialContainer)">
+                    Necesito tenerlo a mano para revisión o consulta
+                </button>
+            </div>
+            <div id="typeOfTaskSectionId" class="typeOfTaskSection">
+                <h2>¿Cuál es la siguiente acción?</h2>
+                <button id='projectBt' onclick="saveNewProject()">
+                    Requiere más de una acción
+                </button>
+                <button id='actNowBt'
+                onclick="dropSection(externalSoftwareLinksSection)">
+                    Lo haré ahora
+                </button>
+                <button id='todoBt'
+                onclick="saveNewTodo()">
+                    Lo haré apenas pueda
+                </button>
 
-        <div class='negativeActionSection' id="negativeActionSectionId">
-            <button id='recycleBinBt'
-            onclick="saveNegativeActionTask(recycleBinContainer)">
-                No me sirve en absoluto
-            </button>
-            <button id='somedayMaybeBt'
-            onclick="saveNegativeActionTask(somedayTasksContainer)">
-                Ahora no puedo, tal vez después sí
-            </button>
-            <button id='referenceMaterialBt'
-            onclick="saveNegativeActionTask(referenceMaterialContainer)">
-                Necesito tenerlo a mano para revisión o consulta
-            </button>
-        </div>
+                <div class="externalSoftwareLinksSection"
+                id='externalSoftwareLinksSectionId'>
+                <!-- this section is within the "type of task" section. but is only revealed when necessary -->
+                    <ul id='externalSoftwareLinksUl'> <strong>Software útil</strong>
+                        <li class='externalSoftwareLinksLi'>
+                            Google Docs
+                        </li>
+                        <li class='externalSoftwareLinksLi'>
+                            Notion
+                        </li>
+                        <li class='externalSoftwareLinksLi'>
+                            Figma
+                        </li>
+                        <li class='externalSoftwareLinksLi'>
+                            VS Code (web edition)
+                        </li>
+                        <li class='externalSoftwareLinksLi'>
+                            Google Sheets
+                        </li>
+                        <li class='externalSoftwareLinksLi'>
+                            Pixlr.com
+                        </li>
+                        <li class='externalSoftwareLinksLi'>
+                            video editor
+                        </li>
+                    </ul>
+                </div>
 
-        <div id="recycleBinContainerId" class='recycleBinContainer'>
-            <h3 class="recycleBinHeader">
-                Papelera de reciclaje
-            </h3>
-            <ul id='recycleBinUl'>
-    
-            </ul>
-        </div>
-        <div id="somedayTasksContainerId" class='somedayTasksContainer'>
-            <h3 class="somedayTaskContainerHeader">
-                Tareas pospuestas
-            </h3>
-            <ul id='somedayMaybeUl'>
-    
-            </ul>
-        </div>
-        <div id="referenceMaterialContainerId" class='referenceMaterialContainer'>
-            <h3 class='referenceMaterialContainerHeader'>
-                Material de referencia y consulta
-            </h3>
-            <ul class='referenceMaterialUl'>
-    
-            </ul>
-        </div>
-
-    </div>
-
-    <div id="TypeOfTaskSectionId" class="TypeOfTaskSection">
-        <h2>¿Cuál es la siguiente acción?</h2>
-        <button id='projectBt'
-        onclick="saveNewProject()">
-            Requiere más de una acción
-        </button>
-        <button id='actNowBt'
-        onclick="dropSection(externalSoftwareLinksSection)">
-            Lo haré ahora
-        </button>
-        <button id='todoBt'
-        onclick="saveNewTodo()">
-            Lo haré apenas pueda
-        </button>
-
-        <div class="externalSoftwareLinksSection"
-        id='externalSoftwareLinksSectionId'>
-            <ul id='externalSoftwareLinksUl'> <strong>Software útil</strong>
-                <li class='externalSoftwareLinksLi'>
-                    Google Docs
-                </li>
-                <li class='externalSoftwareLinksLi'>
-                    Notion
-                </li>
-                <li class='externalSoftwareLinksLi'>
-                    Figma
-                </li>
-                <li class='externalSoftwareLinksLi'>
-                    VS Code (web edition)
-                </li>
-                <li class='externalSoftwareLinksLi'>
-                    Google Sheets
-                </li>
-                <li class='externalSoftwareLinksLi'>
-                    Pixlr.com
-                </li>
-                <li class='externalSoftwareLinksLi'>
-                    video editor
-                </li>
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="projectsContainer" id='projectsContainerId'>
-        <h3 class="projectsHeader">
-            Proyectos
-        </h3>
     </div>
     
     <div class="todosContainer" id='todosContainerId'>
@@ -135,15 +120,42 @@
 
         </ul>
     </div>
-    
-    
+    </div>
+    <div class="rightContainer">
+        <div id="recycleBinContainerId" class='recycleBinContainer'>
+            <h3 class="recycleBinHeader">
+                Papelera de reciclaje
+            </h3>
+            <ul id='recycleBinUl'>
+
+            </ul>
+        </div>
+        <div id="somedayTasksContainerId" class='somedayTasksContainer'>
+            <h3 class="somedayTaskContainerHeader">
+                Tareas pospuestas
+            </h3>
+            <ul id='somedayMaybeUl'>
+
+            </ul>
+        </div>
+        <div id="referenceMaterialContainerId" class='referenceMaterialContainer'>
+            <h3 class='referenceMaterialContainerHeader'>
+                Material de referencia y consulta
+            </h3>
+            <ul class='referenceMaterialUl'>
+
+            </ul>
+        </div>
+    </div>
+</div>        
+        
 
 
 
 
 
 
-    <div id="addStuffDiv">
+    <!-- <div id="addStuffDiv">
         <form id='secondForm' action="">
             <input type="text" name="Escribe aquí" id="finalText" value="text">
             <button id="finalBt" type="submit">
@@ -155,7 +167,7 @@
         <ul id="listParent">
 
         </ul>
-    </div>
+    </div> -->
     <script src='Untitled-1.js'></script>
 </body>
 </html>

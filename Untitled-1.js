@@ -2,16 +2,23 @@ console.log("CONSOLE YES");
 
 const dropSection = function (section_name) {
   section_name.style.display = "block";
-  /* it's display CSS property is originally 'none', 
-  this sets it to 'block' so it becomes visible.
-  If the intention is to make it a toogle, 
-  it can be wrapped in an if statement*/
+  if (section_name == externalSoftwareLinksSection) section_name.style.display = 'block';
+  if (section_name == typeOfTaskSection) { 
+    /* this if statement's goal is to prevent negativeActionSection and typeOfTaskSection
+    from appearing at the same time. When one of the is called, the other's visibility and display
+    properties are changed to hide, and viceversa */
+    //typeOfTaskSection.style.display = 'block';
+    negativeActionSection.style.display = 'none';
+    //negativeActionSection.style.display = 'visible';
+  } else if (section_name == negativeActionSection) {
+    //negativeActionSection.style.display = 'block';
+    typeOfTaskSection.style.display = 'none';
+    //typeOfTaskSection.style.display = 'visible';
+    }
 };
 
 // get the DOM elements
 let chooseActionSection = document.getElementById("chooseActionSectionId"); 
-let TypeOfTaskSection = document.getElementById("TypeOfTaskSectionId");
-
 let dropSectionTwoBt = document.getElementById("dropChooseActionSectionBt");
 let dropTypeOfTaskSectionBt = document.getElementById('dropTypeOfTaskSectionBtId');
 let dropNegativeActionSectionBt = document.getElementById('dropNegativeActionSectionBtId');
@@ -21,8 +28,8 @@ let dropNegativeActionSectionBt = document.getElementById('dropNegativeActionSec
 // positive action buttons and container
 let projectBt = document.getElementById('projectBt');
 let actNowBt = document.getElementById('actNowBt');
-let todoBt = document.getElementById('todoBt')
-let typeOfTaskSection = document.getElementById('typeOfTaskSectionId')
+let todoBt = document.getElementById('todoBt');
+let typeOfTaskSection = document.getElementById('typeOfTaskSectionId');
 
 // negative action buttons and container
 let recycleBinBt = document.getElementById('recycleBinBt');
@@ -33,6 +40,7 @@ let negativeActionSection = document.getElementById('negativeActionSectionId');
 // new project
 let projectsContainer = document.getElementById('projectsContainerId');
 const saveNewProject = function () {
+  projectsContainer.style.display = "block";
   let projectsSubContainer = document.createElement('div');
   projectsContainer.append(projectsSubContainer);
   let projectBody = document.createElement('p');
@@ -45,6 +53,7 @@ const saveNewProject = function () {
 let todosContainer = document.getElementById('todosContainerId');
 let todosParentList = document.getElementById('todosParentListId');
 const saveNewTodo = function () {
+  todosContainer.style.display = "block";
   let newTodo = document.createElement('li');
   let newTodoText = document.createTextNode('test todo text');
   newTodo.append(newTodoText);
@@ -52,14 +61,15 @@ const saveNewTodo = function () {
 }
 
 // show links to external software
+// just grabbing the element from the DOM, the action is performed by the dropSection function
 let externalSoftwareLinksSection = document.getElementById('externalSoftwareLinksSectionId');
-
 
 // add negative action task to container
 let recycleBinContainer = document.getElementById('recycleBinContainerId');
 let somedayTasksContainer = document.getElementById('somedayTasksContainerId');
 let referenceMaterialContainer = document.getElementById('referenceMaterialContainerId');
 const saveNegativeActionTask = function (container) {
+  container.style.display = "block";
   let newNegativeTask = document.createElement('li');
   let newNegativeTaskText = document.createTextNode('test negative task text');
   newNegativeTask.append(newNegativeTaskText);
