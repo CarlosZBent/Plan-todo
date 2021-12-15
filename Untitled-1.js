@@ -2,18 +2,13 @@ console.log("CONSOLE YES");
 
 const dropSection = function (section_name) {
   section_name.style.display = "block";
-  if (section_name == externalSoftwareLinksSection) section_name.style.display = 'block';
   if (section_name == typeOfTaskSection) { 
     /* this if statement's goal is to prevent negativeActionSection and typeOfTaskSection
-    from appearing at the same time. When one of the is called, the other's visibility and display
-    properties are changed to hide, and viceversa */
-    //typeOfTaskSection.style.display = 'block';
+    from appearing at the same time. When one of the is called, the other's display
+    properties are changed to none, and viceversa */
     negativeActionSection.style.display = 'none';
-    //negativeActionSection.style.display = 'visible';
   } else if (section_name == negativeActionSection) {
-    //negativeActionSection.style.display = 'block';
     typeOfTaskSection.style.display = 'none';
-    //typeOfTaskSection.style.display = 'visible';
     }
 };
 
