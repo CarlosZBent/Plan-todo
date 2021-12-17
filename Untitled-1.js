@@ -40,14 +40,22 @@ let negativeActionSection = document.getElementById('negativeActionSectionId');
 
 // new project
 let projectsContainer = document.getElementById('projectsContainerId');
-const saveNewProject = function () {
+const saveNewProject = function (taskNameText) {
+  savedProjectsList.push(taskNameText);
   projectsContainer.style.display = "block";
   let projectsSubContainer = document.createElement('div');
   projectsContainer.append(projectsSubContainer);
   let projectBody = document.createElement('p');
-  let projectBodyText = document.createTextNode('test project body text');
+  let projectBodyText = document.createTextNode(taskNameText);
   projectBody.append(projectBodyText);
   projectsSubContainer.append(projectBody);
+  localStorage.setItem('projects', JSON.stringify(savedProjectsList));
+}
+const getSavedProjects = JSON.parse(localStorage.getItem('projects'));
+let savedProjectsList = [];
+if (savedProjectsList != getSavedProjects) {
+  let savedProjectsList2 = getSavedProjects || [];
+  savedProjectsList2.forEach(savedProject => saveNewProject(savedProject));
 }
 
 // new todo
@@ -65,10 +73,9 @@ const saveNewTodo = function (taskNameText) {
 const getSavedTodos = JSON.parse(localStorage.getItem('todos'));
 let savedTodosList = [];
 if (savedTodosList != getSavedTodos) {
-  let savedTodosList = getSavedTodos || [];
-  savedTodosList.forEach(savedTodo => saveNewTodo(savedTodo));
+  let savedTodosList2 = getSavedTodos || [];
+  savedTodosList2.forEach(savedTodo => saveNewTodo(savedTodo));
 }
-
 
 // show links to external software
 // just grabbing the element from the DOM, the action is performed by the dropSection function
