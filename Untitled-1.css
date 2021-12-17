@@ -1,6 +1,8 @@
-/*body {
-    background-color: #b4d1e1;
-}*/
+body {
+    /* background-color: #b4d1e1; */
+    color: #3d3a3a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
                                                 /* GENERAL/COMMON STYLES */
 div{ /* general div styles. meant to apply to container divs bc they should behave homogeneoulsy */
     position: relative;
@@ -16,7 +18,8 @@ div{ /* general div styles. meant to apply to container divs bc they should beha
 button { /* general common button style, any specific style must be applied to the button at hand */
     display: block;
     margin: 7px;
-    background-color: white;
+    color: #3d3a3a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-width: 0px;
     box-shadow: 0px 3px 4px #cccaca;
     padding: 4px;
@@ -44,7 +47,7 @@ button { /* general common button style, any specific style must be applied to t
     .rightContainer {
         background-color: #b4d1e1;
         box-shadow: 0px 0px 0px;
-        top: 315px;
+        top: 365px;
 }
                                                 /* SECTION AND ITEM SPECIFIC STYLES */
 .topLinksSection {
@@ -52,7 +55,8 @@ button { /* general common button style, any specific style must be applied to t
     justify-content: space-evenly;
     align-items: center;
     margin: 15px auto;
-    width: 35%;
+    min-width: 35%;
+    max-width: 50%;
     height: 30px;
     background-color: #b4d1e1;
     box-shadow: 0px 0px 0px;
@@ -60,6 +64,13 @@ button { /* general common button style, any specific style must be applied to t
     .topLinksSection li {
         display: inline;
     }
+.page_header {
+    display: block;
+    margin: 15px, auto;
+    font-family: 'Monotype Corsiva', 'MV Boli', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #3d3a3a;
+}
 .shortcutsContainer {
     width: 50%;
 }
@@ -80,7 +91,7 @@ button { /* general common button style, any specific style must be applied to t
 
 .projectsContainer {
     position: relative;
-    top: 97px; /*this is to force the projects container to appear
+    top: 69px; /*this is to force the projects container to appear
     where it must, to the right of the button that calls it*/
     max-height: 340px;
 }
