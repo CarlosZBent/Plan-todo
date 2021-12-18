@@ -1,10 +1,7 @@
 console.log("CONSOLE YES");
 
-// getting the task name
+// getting the task name input from the DOM
 let taskNameField = document.getElementById('taskName');
-// for (x = Infinity; x > 0; x++) {
-//   taskNameFieldValue = taskNameField.value;
-// }
 
 const dropSection = function (section_name) {
   section_name.style.display = "block";
@@ -81,19 +78,48 @@ if (savedTodosList != getSavedTodos) {
 // just grabbing the element from the DOM, the action is performed by the dropSection function
 let externalSoftwareLinksSection = document.getElementById('externalSoftwareLinksSectionId');
 
-// add negative action task to container
+// add useless task to recycle bin
 let recycleBinContainer = document.getElementById('recycleBinContainerId');
-let somedayTasksContainer = document.getElementById('somedayTasksContainerId');
-let referenceMaterialContainer = document.getElementById('referenceMaterialContainerId');
-const saveNegativeActionTask = function (container) {
-  container.style.display = "block";
-  let newNegativeTask = document.createElement('li');
-  let newNegativeTaskText = document.createTextNode('test negative task text');
-  newNegativeTask.append(newNegativeTaskText);
-  container.append(newNegativeTask);
+const throwAwayTask = function (container, uselessTask) {
+  let newUselessTask = document.createElement('li');
+  let newUselessTaskText = document.createTextNode(uselessTask);
+  newUselessTask.append(newUselessTaskText);
+  container.append(newUselessTask)
 }
 
+// add someday/maybe task to container
+let somedayTasksContainer = document.getElementById('somedayTasksContainerId');
+const saveSomedayTask = function (container, taskNameText) {
+  savedSomedayTasks.push(taskNameText);
+  let newSomedayTask = document.createElement('li');
+  let newSomedayTaskText = document.createTextNode(taskNameText);
+  newSomedayTask.append(newSomedayTaskText);
+  container.append(newSomedayTask);
+  localStorage.setItem('somedayTask', JSON.stringify(savedSomedayTasks));
+}
+const getsavedSomedayTasks = JSON.parse(localStorage.getItem('somedayTask'))
+let savedSomedayTasks = [];
+if (savedSomedayTasks != getsavedSomedayTasks) {
+  savedSomedayTasks2 = getsavedSomedayTasks || [];
+  savedSomedayTasks2.forEach(somedayTask => saveSomedayTask(somedayTasksContainer, somedayTask))
+}
 
+// add reference material to container
+let referenceMaterialContainer = document.getElementById('referenceMaterialContainerId');
+const saveReferenceTask = function (container, taskNameText) {
+  savedReferenceTasks.push(taskNameText);
+  let newSomedayTask = document.createElement('li');
+  let newSomedayTaskText = document.createTextNode(taskNameText);
+  newSomedayTask.append(newSomedayTaskText);
+  container.append(newSomedayTask);
+  localStorage.setItem('referenceTask', JSON.stringify(savedReferenceTasks));
+}
+const getsavedReferenceTasks = JSON.parse(localStorage.getItem('referenceTask'))
+let savedReferenceTasks = [];
+if (savedReferenceTasks != getsavedReferenceTasks) {
+  savedReferenceTasks2 = getsavedReferenceTasks || [];
+  savedReferenceTasks2.forEach(somedayTask => saveReferenceTask(referenceMaterialContainer, somedayTask))
+}
 
 
 // ***add text to container***

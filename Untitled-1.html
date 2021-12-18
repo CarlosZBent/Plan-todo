@@ -21,11 +21,10 @@
         <div class="shortcutsContainer">
             <h3 class="shortcutsHeader"> Accesos directos</h3>
             <ul>
-                <li>Proyectos</li>
-                <li>Tareas por hacer</li>
-                <li>Tareas pospuestas</li>
-                <li>Material de referencia y consulta</li>
-                <li>Software útil</li>
+                <a href="#projectsContainerId" onclick="projectsContainerId.style.display = 'block'"><li>Proyectos</li></a>
+                <a href="#todosContainerId" onclick="todosContainerId.style.display = 'block'"><li>Tareas por hacer</li></a>
+                <a href="#somedayTasksContainerId" onclick="somedayTasksContainerId.style.display = 'block'"><li>Tareas pospuestas</li></a>
+                <a href="#referenceMaterialContainerId" onclick="referenceMaterialContainerId.style.display = 'block'"><li>Material de referencia y consulta</li></a>
             </ul>
         </div>
         <div class="projectsContainer" id='projectsContainerId'>
@@ -57,15 +56,18 @@
         </div>
             <div class='negativeActionSection' id="negativeActionSectionId">
                 <button id='recycleBinBt'
-                onclick="saveNegativeActionTask(recycleBinContainer)">
+                onclick=" dropSection(recycleBinContainer),
+                throwAwayTask(recycleBinContainer, taskNameField.value)">
                     No me sirve en absoluto
                 </button>
                 <button id='somedayMaybeBt'
-                onclick="saveNegativeActionTask(somedayTasksContainer)">
+                onclick=" dropSection(somedayTasksContainer),
+                saveSomedayTask(somedayTasksContainer, taskNameField.value)">
                     Ahora no puedo, tal vez después sí
                 </button>
                 <button id='referenceMaterialBt'
-                onclick="saveNegativeActionTask(referenceMaterialContainer)">
+                onclick="dropSection(referenceMaterialContainer), 
+                saveReferenceTask(referenceMaterialContainer, taskNameField.value)">
                     Necesito tenerlo a mano para revisión o consulta
                 </button>
             </div>
