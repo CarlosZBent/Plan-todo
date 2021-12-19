@@ -57,17 +57,17 @@
             <div class='negativeActionSection' id="negativeActionSectionId">
                 <button id='recycleBinBt'
                 onclick=" dropSection(recycleBinContainer),
-                throwAwayTask(recycleBinContainer, taskNameField.value)">
+                throwAwayTask(taskNameField.value)">
                     No me sirve en absoluto
                 </button>
                 <button id='somedayMaybeBt'
                 onclick=" dropSection(somedayTasksContainer),
-                saveSomedayTask(somedayTasksContainer, taskNameField.value)">
+                saveSomedayTask(askNameField.value)">
                     Ahora no puedo, tal vez después sí
                 </button>
                 <button id='referenceMaterialBt'
                 onclick="dropSection(referenceMaterialContainer), 
-                saveReferenceTask(referenceMaterialContainer, taskNameField.value)">
+                saveReferenceTask(taskNameField.value)">
                     Necesito tenerlo a mano para revisión o consulta
                 </button>
             </div>
@@ -137,7 +137,7 @@
             <h3 class="somedayTaskContainerHeader">
                 Tareas pospuestas
             </h3>
-            <ul id='somedayMaybeUl'>
+            <ul id='somedayTasksUl'>
 
             </ul>
         </div>
@@ -145,7 +145,7 @@
             <h3 class='referenceMaterialContainerHeader'>
                 Material de referencia y consulta
             </h3>
-            <ul class='referenceMaterialUl'>
+            <ul id='referenceMaterialUl'>
 
             </ul>
         </div>

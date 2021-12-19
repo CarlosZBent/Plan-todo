@@ -82,43 +82,46 @@ let externalSoftwareLinksSection = document.getElementById('externalSoftwareLink
 
 // add useless task to recycle bin
 let recycleBinContainer = document.getElementById('recycleBinContainerId');
-const throwAwayTask = function (container, uselessTask) {
+recycleBinUl = document.getElementById('recycleBinUl');
+const throwAwayTask = function (uselessTask) {
   let newUselessTask = document.createElement('li');
   let newUselessTaskText = document.createTextNode(uselessTask);
   newUselessTask.append(newUselessTaskText);
-  container.append(newUselessTask)
+  recycleBinUl.append(newUselessTask);
 }
 
 // add someday/maybe task to container
 let somedayTasksContainer = document.getElementById('somedayTasksContainerId');
+let somedayTasksUl = document.getElementById('somedayTasksUl');
 const saveSomedayTask = function (container, taskNameText) {
   savedSomedayTasks.push(taskNameText);
   let newSomedayTask = document.createElement('li');
   let newSomedayTaskText = document.createTextNode(taskNameText);
   newSomedayTask.append(newSomedayTaskText);
-  container.append(newSomedayTask);
+  somedayTasksUl.append(newSomedayTask);
   localStorage.setItem('somedayTask', JSON.stringify(savedSomedayTasks));
 }
 const getsavedSomedayTasks = JSON.parse(localStorage.getItem('somedayTask'))
 let savedSomedayTasks = [];
 if (savedSomedayTasks != getsavedSomedayTasks) {
   savedSomedayTasks2 = getsavedSomedayTasks || [];
-  savedSomedayTasks2.forEach(somedayTask => saveSomedayTask(somedayTasksContainer, somedayTask))
+  savedSomedayTasks2.forEach(somedayTask => saveSomedayTask(somedayTask))
 }
 
 // add reference material to container
 let referenceMaterialContainer = document.getElementById('referenceMaterialContainerId');
-const saveReferenceTask = function (container, taskNameText) {
+let referenceMaterialUl = document.getElementById('referenceMaterialUl');
+const saveReferenceTask = function (taskNameText) {
   savedReferenceTasks.push(taskNameText);
-  let newSomedayTask = document.createElement('li');
-  let newSomedayTaskText = document.createTextNode(taskNameText);
-  newSomedayTask.append(newSomedayTaskText);
-  container.append(newSomedayTask);
+  let newReferenceTask = document.createElement('li');
+  let newReferenceTaskText = document.createTextNode(taskNameText);
+  newReferenceTask.append(newReferenceTaskText);
+  referenceMaterialUl.append(newReferenceTask);
   localStorage.setItem('referenceTask', JSON.stringify(savedReferenceTasks));
 }
 const getsavedReferenceTasks = JSON.parse(localStorage.getItem('referenceTask'))
 let savedReferenceTasks = [];
 if (savedReferenceTasks != getsavedReferenceTasks) {
   savedReferenceTasks2 = getsavedReferenceTasks || [];
-  savedReferenceTasks2.forEach(somedayTask => saveReferenceTask(referenceMaterialContainer, somedayTask))
+  savedReferenceTasks2.forEach(referenceTask => saveReferenceTask(referenceTask))
 }
