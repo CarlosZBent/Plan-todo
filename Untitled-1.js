@@ -53,6 +53,7 @@ let savedProjectsList = [];
 if (savedProjectsList != getSavedProjects) {
   let savedProjectsList2 = getSavedProjects || [];
   savedProjectsList2.forEach(savedProject => saveNewProject(savedProject));
+  projectsContainer.style.display = "none";
 }
 
 // new todo
@@ -72,6 +73,7 @@ let savedTodosList = [];
 if (savedTodosList != getSavedTodos) {
   let savedTodosList2 = getSavedTodos || [];
   savedTodosList2.forEach(savedTodo => saveNewTodo(savedTodo));
+  todosContainer.style.display = 'none';
 }
 
 // show links to external software
@@ -120,37 +122,3 @@ if (savedReferenceTasks != getsavedReferenceTasks) {
   savedReferenceTasks2 = getsavedReferenceTasks || [];
   savedReferenceTasks2.forEach(somedayTask => saveReferenceTask(referenceMaterialContainer, somedayTask))
 }
-
-
-// ***add text to container***
-
-// getting DOM elements
-// let taskNameInput = document.getElementById("finalText");
-// let secondForm = document.getElementById('secondForm')
-
-// // let tasksList = [];  
-
-// const addTask = function (task) {
-//   tasksList.push(task); // adding task to storage array
-//   console.log(task); // debugging
-//   let taskTag = document.createElement('li');
-//   let taskText = document.createTextNode(task);
-//   taskTag.append(taskText);
-//   let listParent = document.getElementById('listParent');
-//   listParent.append(taskTag);
-//   localStorage.setItem("tasks", JSON.stringify(tasksList));
-// };
-
-// secondForm.onsubmit = (event) => {
-//   event.preventDefault(); // prevents the page refresh on submit
-//   addTask(taskNameInput.value);
-// }
-
-// // updating data when the app starts
-// const existingTasks = JSON.parse(localStorage.getItem("tasks"));
-// let tasksList = [];
-// if (tasksList != existingTasks){
-//   let tasksList = existingTasks || [];
-//   tasksList.forEach(savedTask => addTask(savedTask));
-//   console.log(existingTasks)
-// }
