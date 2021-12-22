@@ -63,16 +63,17 @@ const saveNewTodo = function (taskNameText) {
   savedTodosList.push(taskNameText);
   todosContainer.style.display = 'block';
   let newTodo = document.createElement('li');
-    let newTodoSpan = document.createElement('span');
-    newTodo.append(newTodoSpan);
-    let newTodoText = document.createTextNode(taskNameText);
-    newTodoSpan.append(newTodoText)
-    let newTodoSpanBt = document.createElement('button');
-    newTodoSpanBt.textContent = 'X';
-    newTodoSpan.append(newTodoSpanBt);
-    todosParentList.append(newTodo);
-    let lineBreak = document.createElement('br');
-    todosParentList.append(lineBreak);
+  newTodo.innerHTML = taskNameText;
+  newTodo.className = 'newTodo';
+  let lineBreak = document.createElement('br');
+  todosParentList.append(newTodo);
+    // delete todo on UI. strike through the text.
+    const strikeTodo = function () {
+      newTodo.style.textDecoration = 'line-through';
+      newTodo.style.backgroundColor = '#cccaca';
+    }  
+    newTodo.addEventListener('click', strikeTodo);
+  todosParentList.append(lineBreak);
   localStorage.setItem("todos", JSON.stringify(savedTodosList));
 }
 const getSavedTodos = JSON.parse(localStorage.getItem('todos'));

@@ -36,26 +36,6 @@ a:hover {
     font-size: 17px;
 }
 
-/* li {display: inline;} */
-
-li span{
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0px 0px 5px 2px #e2e2e2;
-    padding: 4px;
-    border-radius: 10px;
-    max-width: 200px;
-    border: 1px solid rgb(219, 215, 215);
-}
-
-li span button {
-    box-shadow: 0px 0px 0px 0px;
-    margin: 0px 0px;
-    border-radius: 5px;
-}
-li span button:hover {
-    font-size: 15px;
-}
                                                 /* STYLE FOR THE BIG 4 CONTANER DIVS */
 .mainContainer{
     width: 98%;
@@ -111,6 +91,14 @@ li span button:hover {
     padding: 6px;
     width: 55%;
 }
+
+.newTodo {
+    box-shadow: 0px 0px 4px 2px #cccaca;
+    padding: 5px;
+    border: 1px solid #cccaca;
+    border-radius: 10px;
+}
+
 .chooseActionSection, .typeOfTaskSection, 
 .negativeActionSection, .externalSoftwareLinksSection,
 .recycleBinContainer, .somedayTasksContainer, .referenceMaterialContainer, 
