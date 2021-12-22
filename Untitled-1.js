@@ -61,11 +61,18 @@ let todosContainer = document.getElementById('todosContainerId');
 let todosParentList = document.getElementById('todosParentListId');
 const saveNewTodo = function (taskNameText) {
   savedTodosList.push(taskNameText);
-  todosContainer.style.display = "block";
+  todosContainer.style.display = 'block';
   let newTodo = document.createElement('li');
-  let newTodoText = document.createTextNode(taskNameText);
-  newTodo.append(newTodoText);
-  todosParentList.append(newTodo);
+    let newTodoSpan = document.createElement('span');
+    newTodo.append(newTodoSpan);
+    let newTodoText = document.createTextNode(taskNameText);
+    newTodoSpan.append(newTodoText)
+    let newTodoSpanBt = document.createElement('button');
+    newTodoSpanBt.textContent = 'X';
+    newTodoSpan.append(newTodoSpanBt);
+    todosParentList.append(newTodo);
+    let lineBreak = document.createElement('br');
+    todosParentList.append(lineBreak);
   localStorage.setItem("todos", JSON.stringify(savedTodosList));
 }
 const getSavedTodos = JSON.parse(localStorage.getItem('todos'));

@@ -19,12 +19,42 @@ button { /* general common button style, any specific style must be applied to t
     display: block;
     margin: 7px;
     color: #3d3a3a;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Calibri, Tahoma, Verdana, sans-serif;
     border-width: 0px;
     box-shadow: 0px 3px 4px #cccaca;
     padding: 4px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+a {
+    color: #3d3a3a;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    font-size: 17px;
+}
+
+/* li {display: inline;} */
+
+li span{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px 2px #e2e2e2;
+    padding: 4px;
+    border-radius: 10px;
+    max-width: 200px;
+    border: 1px solid rgb(219, 215, 215);
+}
+
+li span button {
+    box-shadow: 0px 0px 0px 0px;
+    margin: 0px 0px;
+    border-radius: 5px;
+}
+li span button:hover {
+    font-size: 15px;
 }
                                                 /* STYLE FOR THE BIG 4 CONTANER DIVS */
 .mainContainer{
