@@ -93,16 +93,20 @@ a:hover {
 }
 
 .newTodo {
-    box-shadow: 0px 0px 4px 2px #cccaca;
+    box-shadow: 0px 2px 4px 0px #cccaca;
     padding: 5px;
-    border: 1px solid #cccaca;
+    /* border: 1px solid #cccaca; */
     border-radius: 10px;
+    display: inline-block;
+    margin: 5px auto;
 }
 .newTodoDeleted { /* class to asign to a todo when clicked on, and deleted */
     text-decoration: line-through;
     padding: 5px;
     border-radius: 10px;
     color: #cccaca;
+    display: inline-block;
+    margin: 5px auto;
 }
 
 .chooseActionSection, .typeOfTaskSection, 

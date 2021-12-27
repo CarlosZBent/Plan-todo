@@ -119,7 +119,7 @@ const throwAwayTask = function (uselessTask) {
 // add someday/maybe task to container
 let somedayTasksContainer = document.getElementById('somedayTasksContainerId');
 let somedayTasksUl = document.getElementById('somedayTasksUl');
-const saveSomedayTask = function (container, taskNameText) {
+const saveSomedayTask = function (taskNameText) {
   savedSomedayTasks.push(taskNameText);
   let newSomedayTask = document.createElement('li');
   let newSomedayTaskText = document.createTextNode(taskNameText);
