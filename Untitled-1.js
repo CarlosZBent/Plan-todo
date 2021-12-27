@@ -67,11 +67,12 @@ const saveNewTodo = function (taskNameText) {
   newTodo.className = 'newTodo';
   let lineBreak = document.createElement('br');
   todosParentList.append(newTodo);
-    // delete todo on UI. strike through the text.
+    // function to delete todo on UI. strike through the text.
     const strikeTodo = function () {
-      newTodo.style.textDecoration = 'line-through';
-      newTodo.style.backgroundColor = '#cccaca';
-    }  
+      // newTodo.style.textDecoration = 'line-through';
+      // newTodo.style.backgroundColor = '#cccaca';
+      newTodo.className = 'newTodoDeleted';
+    }
     newTodo.addEventListener('click', strikeTodo);
   todosParentList.append(lineBreak);
   localStorage.setItem("todos", JSON.stringify(savedTodosList));
@@ -83,6 +84,23 @@ if (savedTodosList != getSavedTodos) {
   savedTodosList2.forEach(savedTodo => saveNewTodo(savedTodo));
   todosContainer.style.display = 'none';
 }
+// removing items from DB
+let todosLi = document.getElementsByClassName('newTodo');
+let todosLiArray = Array.from(todosLi); // converting the object to an array to iterate over
+let jsonDBArray = Array.from(getSavedTodos); // converting the object to an array to iterate over
+const testingDeletion = function (){ 
+  todosLiArray.forEach(function (element) { 
+    let elementText = element.textContent; // getting the text from every list element
+    jsonDBArray.forEach(function (value){
+      if (elementText == value && element.className == 'newTodoDeleted'){ 
+        /* if the list element text coincides with a value from the JSON file array 
+        and it's text style is line-through it performs the specified action */
+        // console.log('VALUE + ', value);
+        console.log('deleted ', elementText);
+        }
+      }) 
+    })
+  }
 
 // show links to external software
 // just grabbing the element from the DOM, the action is performed by the dropSection function
@@ -113,7 +131,7 @@ const getsavedSomedayTasks = JSON.parse(localStorage.getItem('somedayTask'))
 let savedSomedayTasks = [];
 if (savedSomedayTasks != getsavedSomedayTasks) {
   savedSomedayTasks2 = getsavedSomedayTasks || [];
-  savedSomedayTasks2.forEach(somedayTask => saveSomedayTask(somedayTask))
+  savedSomedayTasks2.forEach(somedayTask => saveSomedayTask(somedayTask));
 }
 
 // add reference material to container

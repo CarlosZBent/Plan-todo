@@ -98,6 +98,12 @@ a:hover {
     border: 1px solid #cccaca;
     border-radius: 10px;
 }
+.newTodoDeleted { /* class to asign to a todo when clicked on, and deleted */
+    text-decoration: line-through;
+    padding: 5px;
+    border-radius: 10px;
+    color: #cccaca;
+}
 
 .chooseActionSection, .typeOfTaskSection, 
 .negativeActionSection, .externalSoftwareLinksSection,
