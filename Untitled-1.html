@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan todo - el silo para almacenar todos tus planes</title>
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Plan todo - para almacenar todos tus planes</title>
     <link rel="stylesheet" href="Untitled-1.css">
 </head>
 
 <body>
     <div class="topLinksSection">
-        <li><a href=""> Contribuir </a></li>
+        <li><a href="paynest.app/carlos-zbent"> Contribuir </a></li>
         <li><a href=""> Soporte técnico </a></li>
         <li><a href=""> Sugerir características </a></li>
         <li><a href=""> Instrucciones de uso </a></li>
     </div>
-<div class="mainContainer"> <!--main div that contains the other three big containers-->    
+<div class="mainContainer"> <!--main div that contains the other three big containers-->
     <div class="leftContainer"> <!--left aligned big div that contains containers that go left of the main page flow-->
         <h1 class='page_header'>Plan todo</h1>
         <div class="shortcutsContainer">
@@ -62,7 +68,7 @@
                 </button>
                 <button id='somedayMaybeBt'
                 onclick=" dropSection(somedayTasksContainer),
-                saveSomedayTask(askNameField.value)">
+                saveSomedayTask(taskNameField.value)">
                     Ahora no puedo, tal vez después sí
                 </button>
                 <button id='referenceMaterialBt'
@@ -119,7 +125,7 @@
         <h3 class="todosHeader">
             Tareas por hacer
         </h3>
-        <ul id="todosParentListId" class='todosParentList'>
+        <ul id="todosParentListId" class='todosParentList' onclick="deleteTodo()">
 
         </ul>
     </div>
@@ -137,7 +143,7 @@
             <h3 class="somedayTaskContainerHeader">
                 Tareas pospuestas
             </h3>
-            <ul id='somedayTasksUl'>
+            <ul id='somedayTasksUl' onclick="deleteSomedayTask()">
 
             </ul>
         </div>
@@ -145,32 +151,12 @@
             <h3 class='referenceMaterialContainerHeader'>
                 Material de referencia y consulta
             </h3>
-            <ul id='referenceMaterialUl'>
+            <ul id='referenceMaterialUl' onclick="deleteReferenceTask()">
 
             </ul>
         </div>
     </div>
 </div>        
-        
-
-
-
-
-
-
-    <!-- <div id="addStuffDiv">
-        <form id='secondForm' action="">
-            <input type="text" name="Escribe aquí" id="finalText" value="text">
-            <button id="finalBt" type="submit">
-                Agregar
-            </button>
-        </form>
-    </div>
-    <div id="container">
-        <ul id="listParent">
-
-        </ul>
-    </div> -->
-    <script src='Untitled-1.js'></script>
+<script src='Untitled-1.js'></script>
 </body>
 </html>
