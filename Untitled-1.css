@@ -33,7 +33,7 @@ a {
 }
 a:hover {
     text-decoration: underline;
-    font-size: 17px;
+    /* font-size: 17px; */
 }
 
                                                 /* STYLE FOR THE BIG 4 CONTANER DIVS */
