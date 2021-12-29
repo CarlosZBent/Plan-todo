@@ -94,9 +94,15 @@ const testingDeletion = function (){
     jsonDBArray.forEach(function (value){
       if (elementText == value && element.className == 'newTodoDeleted'){ 
         /* if the list element text coincides with a value from the JSON file array 
-        and it's text style is line-through it performs the specified action */
-        // console.log('VALUE + ', value);
-        console.log('deleted ', elementText);
+        and it's text style is line-through it performs the action specified below */
+        console.log('deleted ', value);
+        let indexOfValue = getSavedTodos.indexOf(value);
+        console.log(indexOfValue);
+          if (indexOfValue !== -1) { // this prevents the index from deleting items it shouldnt delete
+            getSavedTodos.splice(indexOfValue, 1);
+            let getSavedTodosNew = JSON.stringify(getSavedTodos)
+            localStorage.setItem("todos", getSavedTodosNew) // add the new array to local storage
+          }
         }
       }) 
     })
