@@ -168,15 +168,22 @@ const deleteSomedayTask = function () {
   }
 
 
-// add reference material to container
+// new reference material item
 let referenceMaterialContainer = document.getElementById('referenceMaterialContainerId');
 let referenceMaterialUl = document.getElementById('referenceMaterialUl');
 const saveReferenceTask = function (taskNameText) {
   savedReferenceTasks.push(taskNameText);
   let newReferenceTask = document.createElement('li');
-  let newReferenceTaskText = document.createTextNode(taskNameText);
-  newReferenceTask.append(newReferenceTaskText);
+  newReferenceTask.innerHTML = taskNameText;
+  newReferenceTask.className = 'newReferenceMaterial';
+  let lineBreak = document.createElement('br');
   referenceMaterialUl.append(newReferenceTask);
+    // deleting item on the UI
+    const strikeReferenceMaterial = function () {
+      newReferenceTask.className = 'referenceMaterialDeleted';
+    }
+    newReferenceTask.addEventListener('click', strikeReferenceMaterial);
+  referenceMaterialUl.append(lineBreak);
   localStorage.setItem('referenceTask', JSON.stringify(savedReferenceTasks));
 }
 const getsavedReferenceTasks = JSON.parse(localStorage.getItem('referenceTask'));
@@ -186,3 +193,22 @@ if (savedReferenceTasks != getsavedReferenceTasks) {
   savedReferenceTasks2.forEach(referenceTask => saveReferenceTask(referenceTask));
   referenceMaterialContainer.style.display = 'none';
 }
+// removing reference material items from DB
+let referenceMaterialLi = document.getElementsByClassName('newReferenceMaterial');
+let referenceMaterialLiArray = Array.from(referenceMaterialLi);
+let jsonDBReferenceMaterialArray = Array.from(getsavedReferenceTasks);
+const deleteReferenceTask = function () {
+  referenceMaterialLiArray.forEach(function (referenceMaterialElement) {
+    let referenceMaterialElementText = referenceMaterialElement.textContent;
+    jsonDBReferenceMaterialArray.forEach(function (referenceMaterialValue) {
+      if (referenceMaterialElementText == referenceMaterialValue && referenceMaterialElement.className == 'referenceMaterialDeleted') {
+        let indexOfReferenceMaterialValue = getsavedReferenceTasks.indexOf(referenceMaterialValue);
+          if (indexOfReferenceMaterialValue !== -1) {
+            getsavedReferenceTasks.splice(indexOfReferenceMaterialValue, 1);
+            let getsavedReferenceTasksNew = JSON.stringify(getsavedReferenceTasks);
+            localStorage.setItem('referenceTask', getsavedReferenceTasksNew);
+          }
+        }
+      })
+    })
+  }
