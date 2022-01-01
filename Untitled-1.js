@@ -1,5 +1,11 @@
 console.log("CONSOLE YES");
 
+// top links overlays
+let contributeOverlay = document.getElementById('contributeOverlayId');
+const showOverlay = function (section) {
+  section.style.display = 'block';
+}
+
 // getting the task name input from the DOM
 let taskNameField = document.getElementById('taskName');
 
