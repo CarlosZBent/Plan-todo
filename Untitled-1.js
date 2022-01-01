@@ -5,6 +5,12 @@ let contributeOverlay = document.getElementById('contributeOverlayId');
 const showOverlay = function (section) {
   section.style.display = 'block';
 }
+document.onclick = function(event){
+  let target = event.target;
+  if(target.id == 'contributeOverlayId') {
+    contributeOverlay.style.display = 'none';
+  }
+}
 
 // getting the task name input from the DOM
 let taskNameField = document.getElementById('taskName');
