@@ -6,7 +6,7 @@ body {
                                                 /* GENERAL/COMMON STYLES */
 div{ /* general div styles. meant to apply to container divs bc they should behave homogeneoulsy */
     position: relative;
-    padding: 7px;
+    padding: 5px;
     height: fit-content;
     width: 95%;
     margin: 15px auto;
@@ -32,8 +32,8 @@ a {
     text-decoration: none;
 }
 a:hover {
-    text-decoration: underline;
-    /* font-size: 17px; */
+    /* text-decoration: underline; */
+    font-weight: bolder;
 }
 
                                                 /* STYLE FOR THE BIG 4 CONTANER DIVS */
@@ -71,12 +71,19 @@ a:hover {
     background-color: #b4d1e1;
     box-shadow: 0px 0px 0px;
 }
+    .topLinksSection img {
+        width: 32px;
+        height: 32px;
+    }
     .topLinksSection li {
         display: inline;
         cursor: pointer;
     }
+    .topLinksSection li:hover {
+        font-weight: bolder;
+    } 
 
-    .contributeOverlay {
+    .overlay {
         position: fixed; /* Sit on top of the page content */
         display: none; /* Hidden by default */
         width: 100%; /* Full width (cover the whole page) */
@@ -89,7 +96,8 @@ a:hover {
         z-index: 2; /* Specify a stack order in case you're using a different order for other elements*/
         cursor: pointer; /* Add a pointer on hover */
     }
-        .contributeOverlayContent {
+        .contributeOverlayContent, .supportOverlayContent
+        , .suggestOverlayContent, .instructionsOverlayContent {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -98,12 +106,20 @@ a:hover {
             transform: translate(-50%,-50%);
             -ms-transform: translate(-50%,-50%);
             width: 40%;
-            height: 40%;
+            height: fit-content;
             box-shadow: 0px 0px 0px 0px;
+            padding: 15px;
             }
-        .contributeOverlayContent p {
-            font-size: 12px;
+        .overlay p {
+            font-size: 20px;
             color: #3d3a3a;
+            text-align: justify;
+        }
+        .overlay a {
+            font-size: 23px;
+            display: block;
+            width: fit-content;
+            margin: 5px auto;
         }
 
 .page_header {

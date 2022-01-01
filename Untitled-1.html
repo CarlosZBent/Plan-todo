@@ -16,18 +16,49 @@
 
 <body>
     <div class="topLinksSection">
+        <img src="Plan todo logo.png" alt="plan todo logo">
         <li onclick="showOverlay(contributeOverlay)" >Contribuir</li>
-            <div class="contributeOverlay" id=contributeOverlayId>
+            <div class="overlay" id=contributeOverlayId>
                 <div class="contributeOverlayContent">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia ea quos officia voluptatibus 
-                        facilis commodi tenetur doloribus ipsa eos earum? Saepe placeat rem tempora autem 
-                        dolor reiciendis quos ipsum molestiae.</p>
-                    <a href="http://paynest.app/carlos-zbent"> My Paynest </a>
+                    <p>"Plan todo" is an effort by just one person,
+                        if you want to support the development you can contribute
+                        via the different methods found in the link below, 
+                        also, you can help me by sharing the app😉. 
+                        Te lo agradezco enormemente.</p>
+                    <a href="http://paynest.app/carlos-zbent"> Donate💙 </a>
+                    <p> PS: The link above may be unfamiliar to you, that's ok. It is a pretty new app called Paynest, 
+                        made by two good friends of mine. Think of it like a place to gather all of
+                        your payment methods, quite useful if you think about it😎. </p>
                 </div>
             </div>
-        <li><a href=""> Soporte técnico </a></li>
-        <li><a href=""> Sugerir características </a></li>
-        <li><a href=""> Instrucciones de uso </a></li>
+        <li onclick="showOverlay(supportOverlay)" >Soporte técnico</li>
+            <div class="overlay" id='supportOverlayId'>
+                <div class="supportOverlayContent">
+                    <p>
+                        You can report any issue,
+                        consult any doubt, or even
+                        suggest new features via the links below.
+                    </p>
+                    <a href="http://t.me/plan_todo_app">Telegram</a>
+                    <a href="mailto:plantodo.app@gmail.com">E-mail</a>
+                    <a href="http://twitter.com/plan_todo_app">Twitter</a>
+                </div>        
+            </div>
+        <li onclick="showOverlay(instructionsOverlay)" > Instrucciones de uso </li>
+            <div class="overlay" id='instructionsOverlayId'>
+                <div class="instructionsOverlayContent">
+                    <p>
+                        Plan todo se basa en un diagrama creado por David Allen. 
+                        Puedes revisarlo en su libro "Getting things done".
+                        Puedes avanzar a través de Plan todo para tomar una 
+                        mejor decisión sobre la organización de tus tareas, y 
+                        termina tu recorrido con un contenedor 
+                        adecuado para almacenar esas tareas.
+                        Puedes saltarte la toma de decisiones e ir directamente al 
+                        contenedor en que quieres modificar algo.
+                    </p>
+                </div>
+            </div>
     </div>
 <div class="mainContainer"> <!--main div that contains the other three big containers-->
     <div class="leftContainer"> <!--left aligned big div that contains containers that go left of the main page flow-->

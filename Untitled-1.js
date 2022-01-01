@@ -2,13 +2,16 @@ console.log("CONSOLE YES");
 
 // top links overlays
 let contributeOverlay = document.getElementById('contributeOverlayId');
+let supportOverlay = document.getElementById('supportOverlayId');
+let suggestOverlay = document.getElementById('suggestOverlayId');
+let instructionsOverlay = document.getElementById('instructionsOverlayId');
 const showOverlay = function (section) {
   section.style.display = 'block';
 }
 document.onclick = function(event){
   let target = event.target;
-  if(target.id == 'contributeOverlayId') {
-    contributeOverlay.style.display = 'none';
+  if(target.className == 'overlay') {
+    target.style.display = 'none';
   }
 }
 
