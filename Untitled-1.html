@@ -17,45 +17,48 @@
 <body>
     <div class="topLinksSection">
         <img src="Plan todo logo.png" alt="plan todo logo">
-        <li onclick="showOverlay(contributeOverlay)" >Contribuir</li>
+        <li onclick="showOverlay(contributeOverlay)" >Contribute</li>
             <div class="overlay" id=contributeOverlayId>
                 <div class="contributeOverlayContent">
                     <p>"Plan todo" is an effort by just one person,
                         if you want to support the development you can contribute
                         via the different methods found in the link below, 
-                        also, you can help me by sharing the app😉. 
-                        Te lo agradezco enormemente.</p>
-                    <a href="http://paynest.app/carlos-zbent"> Donate💙 </a>
-                    <p> PS: The link above may be unfamiliar to you, that's ok. It is a pretty new app called Paynest, 
+                        also, you can help me by sharing the app 😉. 
+                        I appreciate it greatly 🙏.</p>
+                    <a href="http://paynest.app/carlos-zbent"> 💙 Contribute 🤑 </a>
+                    <p style='color:#b4d1e1' > PS: The link above may be unfamiliar to you, that's ok. It is a pretty new app called Paynest, 
                         made by two good friends of mine. Think of it like a place to gather all of
-                        your payment methods, quite useful if you think about it😎. </p>
+                        your payment methods, quite useful if you think about it. </p>
                 </div>
             </div>
-        <li onclick="showOverlay(supportOverlay)" >Soporte técnico</li>
+        <li onclick="showOverlay(supportOverlay)" >Technical support</li>
             <div class="overlay" id='supportOverlayId'>
                 <div class="supportOverlayContent">
                     <p>
                         You can report any issue,
                         consult any doubt, or even
-                        suggest new features via the links below.
+                        suggest new features via the links below 📝.
                     </p>
-                    <a href="http://t.me/plan_todo_app">Telegram</a>
-                    <a href="mailto:plantodo.app@gmail.com">E-mail</a>
-                    <a href="http://twitter.com/plan_todo_app">Twitter</a>
+                    <a href="http://t.me/plan_todo_app">Telegram 👩‍👩‍👧‍👦</a>
+                    <a href="mailto:plantodo.app@gmail.com">E-mail 💌</a>
+                    <a href="http://twitter.com/plan_todo_app">Twitter 🐥</a>
                 </div>        
             </div>
-        <li onclick="showOverlay(instructionsOverlay)" > Instrucciones de uso </li>
+        <li onclick="showOverlay(instructionsOverlay)" > Instructions </li>
             <div class="overlay" id='instructionsOverlayId'>
                 <div class="instructionsOverlayContent">
                     <p>
-                        Plan todo se basa en un diagrama creado por David Allen. 
-                        Puedes revisarlo en su libro "Getting things done".
-                        Puedes avanzar a través de Plan todo para tomar una 
-                        mejor decisión sobre la organización de tus tareas, y 
-                        termina tu recorrido con un contenedor 
-                        adecuado para almacenar esas tareas.
-                        Puedes saltarte la toma de decisiones e ir directamente al 
-                        contenedor en que quieres modificar algo.
+                        🤔 Plan todo is based on a diagram created by David Allen. 
+                        You can review it in his book "Getting things done".
+                        You can advance through Plan todo to take
+                        a better decision organizing your tasks and material, then 
+                        finish on the adequate container for storing those tasks.
+                        You can also skip the choise making and go straight to the 
+                        container you want to work on 💻.
+                        <br><br>
+                        🗑 To delete an item simply click on it. When you load the page again it will be gone.
+                        <br><br>
+                        🙉 The possibility of editing the items is coming soon 🕖. Stay tuned 😁
                     </p>
                 </div>
             </div>
@@ -64,71 +67,71 @@
     <div class="leftContainer"> <!--left aligned big div that contains containers that go left of the main page flow-->
         <h1 class='page_header'>Plan todo</h1>
         <div class="shortcutsContainer">
-            <h3 class="shortcutsHeader"> Accesos directos</h3>
+            <h3 class="shortcutsHeader"> Shortcuts </h3>
             <ul>
-                <a href="#projectsContainerId" onclick="projectsContainerId.style.display = 'block'"><li>Proyectos</li></a>
-                <a href="#todosContainerId" onclick="todosContainerId.style.display = 'block'"><li>Tareas por hacer</li></a>
-                <a href="#somedayTasksContainerId" onclick="somedayTasksContainerId.style.display = 'block'"><li>Tareas pospuestas</li></a>
+                <a href="#projectsContainerId" onclick="projectsContainerId.style.display = 'block'"><li>Projects</li></a>
+                <a href="#todosContainerId" onclick="todosContainerId.style.display = 'block'"><li>To do</li></a>
+                <a href="#somedayTasksContainerId" onclick="somedayTasksContainerId.style.display = 'block'"><li>Postponed</li></a>
                 <a href="#referenceMaterialContainerId" 
-                    onclick="referenceMaterialContainerId.style.display = 'block'"><li>Material de referencia y consulta</li></a>
+                    onclick="referenceMaterialContainerId.style.display = 'block'"><li>Reference and consulting material</li></a>
             </ul>
         </div>
         <div class="projectsContainer" id='projectsContainerId'>
             <h3 class="projectsHeader">
-                Proyectos
+                Projects
             </h3>
         </div>
     </div>
     <div class="centerContainer"> <!--centered big div that contains the main page flow-->
         <div class="taskNameDiv">
-            <h2>¿Cuál es la tarea?</h2>
+            <h2>Name the task or item. What is it?</h2>
             <form>
-                <input type="text" name="Escribe aquí" id="taskName" placeholder="Nombra la tarea...">
+                <input type="text" name="Write here" id="taskName" placeholder="Name it...">
             </form>
             <button id="dropChooseActionSectionBt" onclick="dropSection(chooseActionSection)">
-                Continuar
+                Continue
             </button>
         </div>
         <div class="chooseActionSection" id='chooseActionSectionId'>
-            <h2>¿Puedes actuar sobre la tarea ahora o pronto?</h2>
+            <h2>Is it actionable? Can you work on it?</h2>
             <button id='dropTypeOfTaskSectionBtId'
             onclick="dropSection(typeOfTaskSection)">
-                Sí
+                I will work on it
             </button>
             <button id='dropNegativeActionSectionBtId'
             onclick="dropSection(negativeActionSection)">
-                No
+                Not for now
             </button>
         </div>
             <div class='negativeActionSection' id="negativeActionSectionId">
                 <button id='recycleBinBt'
                 onclick=" dropSection(recycleBinContainer),
                 throwAwayTask(taskNameField.value)">
-                    No me sirve en absoluto
+                    I have no use for it
                 </button>
                 <button id='somedayMaybeBt'
                 onclick=" dropSection(somedayTasksContainer),
                 saveSomedayTask(taskNameField.value)">
-                    Ahora no puedo, tal vez después sí
+                    I can't act on it now, maybe later
                 </button>
                 <button id='referenceMaterialBt'
                 onclick="dropSection(referenceMaterialContainer), 
                 saveReferenceTask(taskNameField.value)">
-                    Necesito tenerlo a mano para revisión o consulta
+                    I need it for further consult or revision
                 </button>
             </div>
             <div id="typeOfTaskSectionId" class="typeOfTaskSection">
-                <h2>¿Cuál es la siguiente acción?</h2>
+                <h2>What's the next action</h2>
                 <button id='projectBt' onclick="saveNewProject(taskNameField.value)">
-                    Requiere más de una acción
+                    It requires more than one action
                 </button>
                 <button id='actNowBt'
                 onclick="dropSection(externalSoftwareLinksSection)">
-                    Lo haré ahora
+                    It will take less than two minutes, I'll do it now
                 </button>
                 <button id='todoBt'
                 onclick="saveNewTodo(taskNameField.value)">
-                    Lo haré apenas pueda
+                    I'll act on it as soon as I can
                 </button>
 
                 <div class="externalSoftwareLinksSection"
@@ -163,7 +166,7 @@
     
     <div class="todosContainer" id='todosContainerId'>
         <h3 class="todosHeader">
-            Tareas por hacer
+            To do
         </h3>
         <ul id="todosParentListId" class='todosParentList' onclick="deleteTodo()">
 
@@ -173,7 +176,7 @@
     <div class="rightContainer">
         <div id="recycleBinContainerId" class='recycleBinContainer'>
             <h3 class="recycleBinHeader">
-                Papelera de reciclaje
+                Useless
             </h3>
             <ul id='recycleBinUl'>
 
@@ -181,7 +184,7 @@
         </div>
         <div id="somedayTasksContainerId" class='somedayTasksContainer'>
             <h3 class="somedayTaskContainerHeader">
-                Tareas pospuestas
+                Postponed
             </h3>
             <ul id='somedayTasksUl' onclick="deleteSomedayTask()">
 
@@ -189,7 +192,7 @@
         </div>
         <div id="referenceMaterialContainerId" class='referenceMaterialContainer'>
             <h3 class='referenceMaterialContainerHeader'>
-                Material de referencia y consulta
+                Reference and consulting material
             </h3>
             <ul id='referenceMaterialUl' onclick="deleteReferenceTask()">
 
