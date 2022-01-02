@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <title>Plan todo - para almacenar todos tus planes</title>
+    <title>Plan todo - the place to store all of your plans</title>
     <link rel="stylesheet" href="Untitled-1.css">
 </head>
 
@@ -96,7 +96,7 @@
             <h2>Is it actionable? Can you work on it?</h2>
             <button id='dropTypeOfTaskSectionBtId'
             onclick="dropSection(typeOfTaskSection)">
-                I will work on it
+                I'll work on it
             </button>
             <button id='dropNegativeActionSectionBtId'
             onclick="dropSection(negativeActionSection)">
@@ -104,6 +104,7 @@
             </button>
         </div>
             <div class='negativeActionSection' id="negativeActionSectionId">
+                <h2>What's it's use, then?</h2>
                 <button id='recycleBinBt'
                 onclick=" dropSection(recycleBinContainer),
                 throwAwayTask(taskNameField.value)">
@@ -112,22 +113,22 @@
                 <button id='somedayMaybeBt'
                 onclick=" dropSection(somedayTasksContainer),
                 saveSomedayTask(taskNameField.value)">
-                    I can't act on it now, maybe later
+                    Can't act on it now, maybe later
                 </button>
                 <button id='referenceMaterialBt'
                 onclick="dropSection(referenceMaterialContainer), 
                 saveReferenceTask(taskNameField.value)">
-                    I need it for further consult or revision
+                    Further consult or revision
                 </button>
             </div>
             <div id="typeOfTaskSectionId" class="typeOfTaskSection">
-                <h2>What's the next action</h2>
+                <h2>What's the next action?</h2>
                 <button id='projectBt' onclick="saveNewProject(taskNameField.value)">
                     It requires more than one action
                 </button>
                 <button id='actNowBt'
                 onclick="dropSection(externalSoftwareLinksSection)">
-                    It will take less than two minutes, I'll do it now
+                    I'll do it in less than two minutes
                 </button>
                 <button id='todoBt'
                 onclick="saveNewTodo(taskNameField.value)">

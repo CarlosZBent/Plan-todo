@@ -18,16 +18,26 @@ div{ /* general div styles. meant to apply to container divs bc they should beha
 
 button { /* general common button style, any specific style must be applied to the button at hand */
     display: block;
-    margin: 7px;
+    margin: 15px auto;
     color: #3d3a3a;
+    background-color: #b4d1e1;
     font-family: 'Segoe UI', Calibri, Tahoma, Verdana, sans-serif;
     border-width: 0px;
-    box-shadow: 0px 3px 4px #cccaca;
     padding: 4px;
     border-radius: 10px;
     cursor: pointer;
 }
+button:hover {
+    background-color: #96b0be;
+    box-shadow: 0px 3px 4px #cccaca;
+}
+button:active {
+    box-shadow: 0px 0px 0px 0px;
+}
 
+h2, h3 {
+    text-align: center;
+}
 ul {
     padding: 3px 20px;
 }
@@ -37,8 +47,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    /* text-decoration: underline; */
-    font-weight: bolder;
+    font-weight: 550;
 }
 
                                                 /* STYLE FOR THE BIG 4 CONTANER DIVS */
@@ -85,7 +94,7 @@ a:hover {
         cursor: pointer;
     }
     .topLinksSection li:hover {
-        font-weight: bolder;
+        font-weight:550;
     } 
 
     .overlay {
@@ -143,11 +152,30 @@ a:hover {
     box-shadow: 0px 3px 4px #cccaca;
     border-width: 0px;
     padding: 6px;
-    width: 55%;
+    display: block;
+    width: 75%;
+    margin: 5px auto;
+}
+#taskName:hover {
+    box-shadow: 0px 5px 6px #cccaca;
+}
+
+#dropNegativeActionSectionBtId {
+    background-color: #F8C9F3;
+}
+#dropNegativeActionSectionBtId:hover {
+    background-color: #cfadd6;
+}
+
+#recycleBinBt {
+    background-color: #FFA1A1;
+}
+#recycleBinBt:hover {
+    background-color: #dd8989;
 }
 
 .newTodo, .newSomedayTask, .newReferenceMaterial, .newProject {
-    box-shadow: 0px 2px 4px 0px #cccaca;
+    background-color: #fafafa;
     padding: 5px;
     border-radius: 10px;
     display: inline-block;
@@ -156,6 +184,10 @@ a:hover {
     text-align: center;
     cursor: pointer;
 }
+.newTodo:hover, .newSomedayTask:hover, .newReferenceMaterial:hover, .newProject:hover {
+    box-shadow: 0px 1px 4px 1px #cccaca;
+}
+
 .newTodoDeleted, .somedayTaskDeleted, .referenceMaterialDeleted, .newProjectDeleted { /* class to asign to a todo when clicked on, and deleted */
     text-decoration: line-through;
     padding: 5px;
