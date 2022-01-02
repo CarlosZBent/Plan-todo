@@ -82,11 +82,25 @@ a:hover {
     justify-content: space-evenly;
     align-items: center;
     margin: 15px auto;
-    /* min-width: 25%; */
     max-width: 30%;
     height: 30px;
     background-color: white;
     box-shadow: 0px 0px 0px;
+}
+@media (max-width:1100px) {
+    .topLinksSection {
+        max-width: 50%;
+    }
+}
+@media (max-width:740px) {
+    .topLinksSection {
+        max-width: 70%;
+    }
+}
+@media (max-width:510px) {
+    .topLinksSection {
+        max-width: 100%;
+    }
 }
     .topLinksSection img {
         width: 32px;
