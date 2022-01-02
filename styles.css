@@ -181,6 +181,13 @@ a:hover {
     background-color: #FFA1A1;
 }
 
+.externalSoftwareLinksLi {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin: 5px auto;
+}
+
 .newTodo, .newSomedayTask, .newReferenceMaterial, .newProject {
     background-color: #fafafa;
     padding: 5px;
@@ -225,4 +232,11 @@ a:hover {
     top: 38px; /*this is to force the projects container to appear
     where it must, to the right of the button that calls it*/
     max-height: 340px;
+}
+
+#recycleBinUl li {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin: 5px auto;
 }

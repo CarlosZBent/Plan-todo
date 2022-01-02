@@ -158,6 +158,7 @@ let recycleBinUl = document.getElementById('recycleBinUl');
 const throwAwayTask = function (uselessTask) {
   let newUselessTask = document.createElement('li');
   let newUselessTaskText = document.createTextNode(uselessTask);
+  newUselessTask.className = 'newTodo';
   newUselessTask.append(newUselessTaskText);
   recycleBinUl.append(newUselessTask);
 }
