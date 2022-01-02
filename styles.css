@@ -27,7 +27,7 @@ button { /* general common button style, any specific style must be applied to t
     cursor: pointer;
 }
 button:hover {
-    background-color: #96b0be;
+    /* background-color: #96b0be; */
     box-shadow: 0px 3px 4px #cccaca;
     animation-name: raiseBt;
     animation-duration: 0.1s;
@@ -148,6 +148,12 @@ a:hover {
 }
 .shortcutsContainer {
     width: 50%;
+    min-width: 30%;
+}
+.shortcutsContainer li {
+    display: inline-block;
+    width: 100%;
+    margin: 5px auto;
 }
 #taskName {
     border-radius: 10px;
@@ -169,15 +175,9 @@ a:hover {
 #dropNegativeActionSectionBtId {
     background-color: #F8C9F3;
 }
-#dropNegativeActionSectionBtId:hover {
-    background-color: #cfadd6;
-}
 
 #recycleBinBt {
     background-color: #FFA1A1;
-}
-#recycleBinBt:hover {
-    background-color: #dd8989;
 }
 
 .newTodo, .newSomedayTask, .newReferenceMaterial, .newProject {
