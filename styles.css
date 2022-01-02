@@ -152,11 +152,16 @@ a:hover {
 }
 .shortcutsContainer {
     width: 50%;
-    min-width: 30%;
+}
+@media (max-width: 710px) {
+    .shortcutsContainer{
+        width: 80%;
+    }
 }
 .shortcutsContainer li {
     display: inline-block;
     width: 100%;
+    min-width: 30%;
     margin: 5px auto;
 }
 #taskName {
@@ -166,7 +171,7 @@ a:hover {
     display: block;
     width: 75%;
     margin: 5px auto;
-    background-color: #fafafa;
+    background-color: #f8f8f8;
 }
 #taskName:hover {
     box-shadow: 0px 5px 6px #cccaca;
@@ -186,7 +191,10 @@ a:hover {
 #recycleBinBt {
     background-color: #FFA1A1;
 }
-
+.externalSoftwareLinksSection {
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 0px;
+}
 .externalSoftwareLinksLi {
     width: 100%;
     display: inline-block;
@@ -195,7 +203,7 @@ a:hover {
 }
 
 .newTodo, .newSomedayTask, .newReferenceMaterial, .newProject {
-    background-color: #fafafa;
+    background-color: #f8f8f8;
     padding: 5px;
     border-radius: 10px;
     display: inline-block;
