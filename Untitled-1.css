@@ -1,6 +1,7 @@
 body {
     /* background-color: #b4d1e1; */
     color: #3d3a3a;
+    background-color: #b4d1e1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
                                                 /* GENERAL/COMMON STYLES */
@@ -25,6 +26,10 @@ button { /* general common button style, any specific style must be applied to t
     padding: 4px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+ul {
+    padding: 3px 20px;
 }
 
 a {
@@ -68,7 +73,7 @@ a:hover {
     min-width: 35%;
     max-width: 50%;
     height: 30px;
-    background-color: #b4d1e1;
+    background-color: white;
     box-shadow: 0px 0px 0px;
 }
     .topLinksSection img {
@@ -146,7 +151,10 @@ a:hover {
     padding: 5px;
     border-radius: 10px;
     display: inline-block;
+    width: 100%;
     margin: 5px auto;
+    text-align: center;
+    cursor: pointer;
 }
 .newTodoDeleted, .somedayTaskDeleted, .referenceMaterialDeleted, .newProjectDeleted { /* class to asign to a todo when clicked on, and deleted */
     text-decoration: line-through;
@@ -155,6 +163,7 @@ a:hover {
     color: #cccaca;
     display: inline-block;
     margin: 5px auto;
+    width: 100%;
 }
 
 .chooseActionSection, .typeOfTaskSection, 
