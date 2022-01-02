@@ -141,14 +141,14 @@ a:hover {
     width: 55%;
 }
 
-.newTodo, .newSomedayTask, .newReferenceMaterial {
+.newTodo, .newSomedayTask, .newReferenceMaterial, .newProject {
     box-shadow: 0px 2px 4px 0px #cccaca;
     padding: 5px;
     border-radius: 10px;
     display: inline-block;
     margin: 5px auto;
 }
-.newTodoDeleted, .somedayTaskDeleted, .referenceMaterialDeleted { /* class to asign to a todo when clicked on, and deleted */
+.newTodoDeleted, .somedayTaskDeleted, .referenceMaterialDeleted, .newProjectDeleted { /* class to asign to a todo when clicked on, and deleted */
     text-decoration: line-through;
     padding: 5px;
     border-radius: 10px;

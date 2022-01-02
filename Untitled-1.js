@@ -56,11 +56,17 @@ const saveNewProject = function (taskNameText) {
   savedProjectsList.push(taskNameText);
   projectsContainer.style.display = "block";
   let projectsSubContainer = document.createElement('div');
+  projectsSubContainer.style.boxShadow = '0px 0px 0px 0px';
   projectsContainer.append(projectsSubContainer);
   let projectBody = document.createElement('p');
   let projectBodyText = document.createTextNode(taskNameText);
+  projectBody.classList.add('newProject');
   projectBody.append(projectBodyText);
   projectsSubContainer.append(projectBody);
+    const strikeProject = () => {
+      projectBody.className = 'newProjectDeleted';
+    }
+    projectBody.addEventListener('click', strikeProject)
   localStorage.setItem('projects', JSON.stringify(savedProjectsList));
 }
 const getSavedProjects = JSON.parse(localStorage.getItem('projects'));
@@ -69,6 +75,27 @@ if (savedProjectsList != getSavedProjects) {
   let savedProjectsList2 = getSavedProjects || [];
   savedProjectsList2.forEach(savedProject => saveNewProject(savedProject));
   projectsContainer.style.display = "none";
+}
+// delete project
+let projectsLi = document.getElementsByClassName('newProject');
+let projectsLiArray = Array.from(projectsLi);
+let jsonDBProjectsArray = Array.from(getSavedProjects);
+const deleteProject = () => {
+  projectsLiArray.forEach((element)=> {
+    let elementText = element.textContent;
+    jsonDBProjectsArray.forEach((value) => {
+      if (elementText == value && element.className == 'newProjectDeleted'){
+        console.log('deleted ', value);
+        let indexOfProjectValue = getSavedProjects.indexOf(value);
+          if (indexOfProjectValue !== -1) {
+            getSavedProjects.splice(indexOfProjectValue, 1);
+            let getSavedProjectsNew = JSON.stringify(getSavedProjects);
+            localStorage.setItem('projects', getSavedProjectsNew)
+          }
+      }
+    })
+
+  })
 }
 
 // new todo
