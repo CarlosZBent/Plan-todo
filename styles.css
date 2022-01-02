@@ -172,6 +172,9 @@ a:hover {
     animation-duration: 0.2s;
     animation-iteration-count: 1;
 }
+#taskName:focus {
+    background-color: #fff;
+}
 
 #dropNegativeActionSectionBtId {
     background-color: #F8C9F3;

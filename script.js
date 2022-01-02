@@ -15,8 +15,9 @@ document.onclick = function(event){
   }
 }
 
-// getting the task name input from the DOM
+// getting useful elements from the DOM
 let taskNameField = document.getElementById('taskName');
+let externalSoftwareLinksSection = document.getElementById('externalSoftwareLinksSectionId');
 
 const dropSection = function (section_name) {
   section_name.style.display = "block";
@@ -148,9 +149,7 @@ const deleteTodo = function (){
     })
   }
 
-// show links to external software
 // just grabbing the element from the DOM, the action is performed by the dropSection function
-let externalSoftwareLinksSection = document.getElementById('externalSoftwareLinksSectionId');
 
 // add useless task to recycle bin
 let recycleBinContainer = document.getElementById('recycleBinContainerId');
