@@ -17,3 +17,11 @@
     from {opacity: .1; width: 70%;}
     to {opacity: 1;width: 95%;}
 }
+
+@keyframes animHeader {
+    0% {color: purple;}
+    25% {color: crimson;}
+    50% {color: deeppink;}
+    75% {color: blueviolet ;}
+    100% {color: red ;}
+}

@@ -155,6 +155,7 @@ a:hover {
             display: block;
             width: fit-content;
             margin: 5px auto;
+            text-decoration: underline;
         }
 
 .page_header {
@@ -163,6 +164,13 @@ a:hover {
     font-family: 'Monotype Corsiva', 'MV Boli', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     color: #3d3a3a;
+}
+.page_header:hover{
+    animation-name: animHeader;
+    animation-duration: 1s;
+    animation-iteration-count: 10;
+    animation-delay: .5s;
+    animation-fill-mode: both;
 }
 .shortcutsContainer {
     width: 50%;
