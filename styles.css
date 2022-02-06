@@ -102,10 +102,10 @@ a:hover {
         max-width: 100%;
     }
 }
-    .topLinksSection img {
+    /* .topLinksSection img {
         width: 32px;
         height: 32px;
-    }
+    } */
     .topLinksSection li {
         display: inline;
         cursor: pointer;
@@ -158,6 +158,7 @@ a:hover {
             text-decoration: underline;
         }
 
+/* 
 .page_header {
     display: block;
     margin: 15px, auto;
@@ -171,7 +172,7 @@ a:hover {
     animation-iteration-count: 10;
     animation-delay: .5s;
     animation-fill-mode: both;
-}
+} */
 .shortcutsContainer {
     width: 50%;
 }
