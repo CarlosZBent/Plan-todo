@@ -5,6 +5,9 @@ let contributeOverlay = document.getElementById('contributeOverlayId');
 let supportOverlay = document.getElementById('supportOverlayId');
 let suggestOverlay = document.getElementById('suggestOverlayId');
 let instructionsOverlay = document.getElementById('instructionsOverlayId');
+
+let domainNoticeOverlay = document.getElementById('domainNoticeOverlayId');
+
 const showOverlay = function (section) {
   section.style.display = 'block';
 }
