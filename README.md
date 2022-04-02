@@ -1,5 +1,5 @@
 # Plan todo
-Plan todo is an app to store all your plans. I built it inspired by a David Allen diagram on the book "Getting things". More info about it very soon on [plan todo's webapp](https://plan-todo.com).
+Plan todo is an app to store all your plans. I built it inspired by a David Allen diagram on the book "Getting things". More info about it very soon on [plan todo's site](https://carloszbent.github.io/Plan-todo).
 
 ## Tech stack
 Plan todo is a project I chose to build, basically, to prove myself my recently acquired javascript abilities. So, it has no framework whatsoever. I built it with vanilla JS and vanilla CSS too (since it is a simple project, I didn't feel the need to use any framework).
