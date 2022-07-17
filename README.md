@@ -10,6 +10,3 @@ Plan todo's code is completely open to anyone that wants to use it or fork it. I
 The code is overall not very complicated. All the main containers are `div`s on the UI, they appear or dissappear by just changing it's `display` property. And on the storage side, it all works with `localStorage`.
 
 You can have a look at the way the `localStorage` works, also the draconian way I came up with to delete the list items from the mockup DB 😅. The UI overall was tricky to build when it came to positioning each container to `left`, `center` or `right`, and have it show up at a specific point of the page. I hope you can use the little tricks I used.
-
-## About me
-You can contact me on [Twitter](https://twitter.com/CarlosZBent/) or [Telegram](https://t.me/carloszbent_channel). Here is [my personal web](https://carlos-z-bent.com) in case you want more info.
